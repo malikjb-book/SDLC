@@ -41,6 +41,7 @@ Requirements elicitation is the process of discovering, understanding, and docum
 #### From Meeting Transcripts to Requirements
 
 Modern AI meeting assistants (Otter.ai, Fireflies.ai, Microsoft Copilot for Teams) can capture requirements in real-time:
+**Note : IDP notebook for a perfect use case here**
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -81,6 +82,7 @@ Modern AI meeting assistants (Otter.ai, Fireflies.ai, Microsoft Copilot for Team
 #### Extracting Requirements from Existing Documents
 
 AI excels at processing large volumes of existing documentation:
+**Note:JM: Need a schema based approach here**
 
 ```python
 # Conceptual: AI-powered requirements extraction from documents
