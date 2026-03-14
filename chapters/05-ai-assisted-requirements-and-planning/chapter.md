@@ -22,7 +22,92 @@ After reading this chapter, you will be able to:
 
 ---
 
+## Chapter Roadmap: The AI-Augmented Requirements Pipeline
+
+This chapter follows the end-to-end workflow that modern teams use to go from stakeholder conversations to sprint-ready backlogs — with AI augmenting every stage:
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│         AI-AUGMENTED REQUIREMENTS & PLANNING PIPELINE                │
+│                                                                      │
+│  ┌───────────────┐    ┌───────────────┐    ┌───────────────┐        │
+│  │  STAKEHOLDER   │    │   ELICITATION  │    │  USER STORY    │       │
+│  │  INPUT         │───▶│   & DISCOVERY  │───▶│  GENERATION    │       │
+│  │               │    │               │    │  & REFINEMENT  │        │
+│  │ • Meetings     │    │ • Transcripts  │    │ • INVEST/CPFC  │       │
+│  │ • Documents    │    │ • Document AI  │    │ • Acceptance   │       │
+│  │ • Feedback     │    │ • EARS syntax  │    │   criteria     │       │
+│  └───────────────┘    └───────────────┘    └──────┬────────┘        │
+│       §5.1                  §5.1                  §5.2              │
+│                                                    │                 │
+│                                                    ▼                 │
+│  ┌───────────────┐    ┌───────────────┐    ┌───────────────┐        │
+│  │  SPRINT        │    │  BACKLOG       │    │ SPECIFICATION  │       │
+│  │  PLANNING      │◀───│  REFINEMENT    │◀───│ ANALYSIS       │       │
+│  │               │    │  & PRIORITY    │    │ & VALIDATION   │       │
+│  │ • Capacity     │    │ • WSJF scoring │    │ • Gap analysis │       │
+│  │ • Sequencing   │    │ • Dependencies │    │ • Ambiguity    │       │
+│  │ • Risk         │    │ • Decomposition│    │ • Traceability │       │
+│  └───────────────┘    └───────────────┘    └───────────────┘        │
+│       §5.4                  §5.5                  §5.3              │
+│                                                                      │
+│  ────────────────────────────────────────────────────────────        │
+│  RUNNING CASE STUDY: InvoiceFlow — B2B Invoice Management Platform   │
+│  Each section demonstrates its concepts using the same project,      │
+│  from initial stakeholder meeting to sprint-ready backlog.           │
+│  ────────────────────────────────────────────────────────────        │
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+> 💡 **Reading Guide:** Each section in this chapter builds on the previous one. We use a **running case study** — a B2B invoice management platform called InvoiceFlow — to demonstrate how AI augments each stage. By the end, you'll see a complete requirements-to-sprint journey.
+
+---
+
 ## 5.1 AI for Requirements Elicitation
+
+### Running Case Study: InvoiceFlow
+
+Throughout this chapter, we use a single running example to demonstrate each concept in action:
+
+> **Project:** InvoiceFlow — a B2B SaaS invoice management platform for mid-market companies (50–500 employees). The platform automates invoice capture, PO matching, approval workflows, and payment processing.
+>
+> **Key Stakeholders:**
+> - **Maria** — Finance Manager. Approves invoices, manages budgets, needs audit trails.
+> - **James** — Accounts Payable Clerk. Processes invoices daily, needs speed and accuracy.
+> - **Priya** — IT Director. Concerned about integration with ERP, security, and uptime.
+> - **External Vendors** — Submit invoices, check payment status.
+>
+> **Initial Trigger:** The CEO has observed that the company spends an average of 14 minutes per invoice on manual processing and wants to reduce this to under 2 minutes. The AP team handles 3,000+ invoices per month.
+
+We'll revisit InvoiceFlow in every section — from the initial stakeholder meeting through to a sprint-ready backlog.
+
+### AI-Assisted Stakeholder Discovery
+
+Before eliciting requirements, teams must identify *who* to talk to. AI can accelerate stakeholder discovery — a step that traditional requirements engineering often handles informally:
+
+| Technique | How AI Helps | Example (InvoiceFlow) |
+|-----------|-------------|----------------------|
+| **Org chart analysis** | AI parses org charts and role descriptions to identify impacted teams | "Finance, Procurement, IT, and Legal all touch the invoice workflow" |
+| **Communication mining** | AI analyzes email/Slack patterns to find informal stakeholders | "The Procurement Lead (not initially listed) is cc'd on 40% of invoice disputes" |
+| **Regulatory mapping** | AI identifies compliance stakeholders based on domain | "SOX compliance requires Internal Audit involvement" |
+| **Impact analysis** | AI maps system integrations to identify upstream/downstream teams | "ERP team, bank API team, and vendor portal team are technical stakeholders" |
+
+**Prompt for Stakeholder Discovery:**
+
+```markdown
+You are a senior business analyst. Given the following project description,
+identify all stakeholders who should be consulted during requirements
+elicitation. For each stakeholder:
+- Role/title and department
+- Why they should be included (what they influence or are impacted by)
+- Priority: Primary (must consult) | Secondary (should consult) | Tertiary (inform)
+- Suggested elicitation method: Interview | Workshop | Survey | Document review
+
+Project: [paste project description]
+```
+
+> 💡 **InvoiceFlow Result:** Running this prompt identified 3 stakeholders the project sponsor hadn't considered: the Internal Audit team (SOX compliance), the Procurement Lead (dispute resolution), and the vendor onboarding coordinator (external user experience). Missing any of these would have created requirements gaps discovered late in development.
 
 ### The Elicitation Challenge
 
@@ -246,6 +331,8 @@ discrepancies before payment.
 **Complexity:** L
 ```
 
+> 💡 **InvoiceFlow Case Study Continued:** The user stories shown above — including the PO-invoice matching story with Maria as the Finance Manager — are drawn directly from our InvoiceFlow case study. By this stage, the AI has processed the stakeholder meeting transcripts (§5.1), extracted structured requirements, and is now converting them into sprint-ready user stories using the CPFC pattern. The example output demonstrates how a single elicited requirement ("automate invoice-to-PO matching") becomes a fully specified story with acceptance criteria, edge cases, and non-functional requirements.
+
 ### User Story Quality Scoring
 
 AI can also evaluate user story quality against established criteria:
@@ -271,6 +358,8 @@ AI can also evaluate user story quality against established criteria:
 ### AI-Driven Gap Analysis
 
 One of AI's most valuable contributions to requirements engineering is its ability to rapidly analyze specifications for gaps, ambiguities, and inconsistencies that human reviewers often miss.
+
+> 💡 **InvoiceFlow Case Study Continued:** With the InvoiceFlow requirements now structured as user stories, we run them through AI-driven specification analysis. The AI immediately catches issues: "FR-001 says 'match invoices automatically' but doesn't specify what happens when multiple POs match with equal confidence scores" (ambiguity), and "The 30-second SLA in NFR-001 may conflict with the multi-currency requirement in FR-004 if exchange rate API latency is high" (cross-requirement conflict).
 
 ### The Specification Quality Matrix
 
@@ -366,6 +455,64 @@ AI can analyze requirement sets for logical contradictions:
 5. No requirement for graceful degradation under load
 ```
 
+### AI-Assisted Traceability
+
+Traceability — the ability to link each requirement to its source, design decisions, test cases, and implementation code — is mandated by standards like IEEE 830 and ISO/IEC/IEEE 29148, yet remains one of the most tedious aspects of requirements management. AI can significantly reduce this burden.
+
+#### The Traceability Challenge
+
+| Traceability Type | From → To | Traditional Effort | AI Capability |
+|------------------|-----------|-------------------|---------------|
+| **Source traceability** | Stakeholder need → Requirement | Manual documentation | ★★★★☆ — AI links requirements to meeting transcripts and source documents |
+| **Design traceability** | Requirement → Architecture/Component | Manual mapping by architects | ★★★☆☆ — AI can suggest mappings based on component descriptions |
+| **Test traceability** | Requirement → Test case | Manual cross-referencing | ★★★★★ — AI excels at generating test cases linked to requirements |
+| **Code traceability** | Requirement → Implementation | Tribal knowledge, comments | ★★★☆☆ — AI can scan code and infer links, but accuracy varies |
+| **Vertical traceability** | Business goal → Epic → Story → Task | Manual hierarchy maintenance | ★★★★☆ — AI maintains hierarchy if stories reference parent epics |
+
+#### AI-Generated Traceability Matrix (InvoiceFlow Example)
+
+```markdown
+# AI Traceability Report: InvoiceFlow — Invoice Matching Module
+
+| Req ID   | Requirement                          | Design Component     | Test Cases        | Status    |
+|----------|--------------------------------------|---------------------|-------------------|-----------|
+| FR-001   | Auto-match invoices to POs           | MatchingEngine.ts    | TC-012, TC-013    | Covered   |
+| FR-002   | Flag discrepancies > 2% tolerance    | DiscrepancyService   | TC-014, TC-015    | Covered   |
+| FR-003   | Route exceptions to AP clerk queue   | ExceptionRouter      | TC-016            | Covered   |
+| NFR-001  | Match within 30s (95th percentile)   | MatchingEngine perf  | PT-001            | Covered   |
+| NFR-002  | SOX audit trail for all decisions    | AuditLogger          | TC-020, TC-021    | Covered   |
+| FR-004   | Multi-currency invoice support       | CurrencyConverter    | —                 | ⚠️ No test |
+| FR-005   | Vendor self-service status portal    | VendorPortal         | —                 | ⚠️ No test |
+
+## Gaps Detected:
+- FR-004 and FR-005 have no test coverage — tests need to be written
+- No traceability link from NFR-002 to specific audit log format spec
+- FR-001 links to MatchingEngine.ts but no link to the ML model spec
+```
+
+**Prompt for Traceability Generation:**
+
+```markdown
+You are a requirements traceability analyst. Given:
+1. A list of requirements (with IDs)
+2. A list of design components or modules
+3. A list of test cases (with IDs)
+
+Generate a traceability matrix mapping each requirement to its:
+- Design component(s) that implement it
+- Test case(s) that verify it
+- Coverage status: Covered | Partially Covered | No Coverage
+
+Flag any requirements with no test coverage or no design mapping.
+Flag any test cases that don't trace back to a requirement (orphan tests).
+
+Requirements: [paste requirements]
+Components: [paste component list]
+Test Cases: [paste test case list]
+```
+
+> ⚠️ **Limitation:** AI-generated traceability links are *suggestions*, not ground truth. AI can identify likely connections based on naming conventions, descriptions, and semantic similarity — but humans must validate these links, especially for safety-critical or compliance-sensitive systems. The real value is that AI reduces a multi-day manual exercise to a few hours of review.
+
 ### Specification Analysis Prompt
 
 ```markdown
@@ -424,6 +571,8 @@ Software estimation is notoriously unreliable. The Standish Group reports that *
 | **LLM-based reasoning** | AI reads the story and provides a T-shirt size with rationale | ★★★☆☆ | Quick first-pass estimates |
 | **Hybrid (AI + human)** | AI suggests estimate; team discusses and adjusts via Planning Poker | ★★★★★ | Sprint planning; combines data + intuition |
 | **Monte Carlo simulation** | AI runs probabilistic models using historical variance data | ★★★★☆ | Release planning; risk assessment |
+
+> 💡 **InvoiceFlow Case Study Continued:** For InvoiceFlow, the AI retrieves 3 analogous stories from the team's Jira history — all involving third-party API integrations with data transformation logic. Historical actuals: 5, 8, and 8 story points. The AI suggests: "Likely 5–8 points; uncertainty driven by the Stripe API integration complexity and multi-currency exchange rate handling." The team discusses in Planning Poker and converges on 8, citing the multi-currency edge cases as the deciding factor.
 
 ### AI-Augmented Planning Poker
 
@@ -609,6 +758,8 @@ EPIC: Multi-Tenant Billing System
         └── Dependencies: Story 3
 ```
 
+> 💡 **InvoiceFlow Case Study Continued:** The epic decomposition above is the InvoiceFlow billing module — one of three major epics identified during elicitation. AI decomposed it into 11 stories, classified them into Must-Have/Should-Have/Nice-to-Have, and mapped dependencies. The team reviews: they move Story 6 (Billing Dashboard) from Should-Have to Must-Have because stakeholder interviews revealed that Maria's team cannot validate billing accuracy without a dashboard. This is exactly the kind of business judgment that AI cannot make — but the AI's structured decomposition made the conversation faster and more focused.
+
 ### AI-Powered Prioritization: The WSJF Framework
 
 **Weighted Shortest Job First (WSJF)** from SAFe can be automated with AI:
@@ -789,6 +940,22 @@ an optimal sprint.
 5. Suggest an optimal story sequence for the sprint
 6. Identify which stories to defer if capacity is tight
 ```
+
+---
+
+## Governance Considerations for AI in Requirements
+
+While this chapter demonstrates the power of AI across the requirements pipeline, it's essential to acknowledge the risks specific to this phase. Requirements errors have the highest cost multiplier in the SDLC — a hallucinated requirement that survives to production can be 100x more expensive to fix than one caught during elicitation.
+
+| Risk | Description | Mitigation |
+|------|------------|------------|
+| **Hallucinated requirements** | AI generates plausible-sounding requirements that don't reflect actual stakeholder needs | Every AI-generated requirement must be traced to a stakeholder source; use the traceability matrix as a validation tool |
+| **Bias amplification** | AI trained on historical data may perpetuate biases in requirements (e.g., accessibility overlooked if prior projects ignored it) | Use AI gap analysis (§5.3) to explicitly check for missing categories: accessibility, i18n, compliance |
+| **Confidentiality exposure** | Sensitive business requirements, competitive strategy, and unreleased product plans are fed to LLMs | Use enterprise-grade LLM deployments with data retention guarantees; avoid pasting confidential requirements into public AI tools |
+| **Over-reliance on AI prioritization** | Teams defer to AI-generated WSJF scores without applying business judgment | AI scores are *inputs* to human decisions; final prioritization must involve the Product Owner and stakeholders |
+| **False confidence in completeness** | AI produces well-formatted, comprehensive-looking specs that mask gaps | Always run the Specification Analysis prompt (§5.3) as a second pass on AI-generated requirements |
+
+> 📚 **Further Reading:** For a comprehensive treatment of AI governance, security, and responsible use across all SDLC phases, see **Chapter 13: Governance, Security & Responsible AI in SDLC**.
 
 ---
 
