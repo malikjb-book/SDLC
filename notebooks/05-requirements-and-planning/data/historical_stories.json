@@ -1,0 +1,25 @@
+{
+  "historical_stories": [
+    {
+      "id": "HIST-101",
+      "title": "Integrate Equifax API for retail credit scoring",
+      "description": "Connect to Equifax REST API, send applicant PII, parse JSON response, and store credit score in Postgres.",
+      "actual_points": 5,
+      "complexity_drivers": ["Standard JSON API", "Clear documentation", "No latency constraints"]
+    },
+    {
+      "id": "HIST-102",
+      "title": "Integrate World-Check API for AML screening",
+      "description": "Send company name and directors to Refinitiv World-Check. Handle fuzzy matching responses, rate limiting, and XML parsing. Map to internal risk DB.",
+      "actual_points": 8,
+      "complexity_drivers": ["XML parsing", "Complex response schema", "Strict latency SLAs", "Fuzzy matching logic"]
+    },
+    {
+      "id": "HIST-103",
+      "title": "Build SWIFT payment gateway integration",
+      "description": "Connect core banking to SWIFT network for cross-border payments. Requires heavy cryptography, HSM integration, and ISO 20022 message formatting.",
+      "actual_points": 13,
+      "complexity_drivers": ["Legacy protocols", "Hardware security modules", "High financial risk"]
+    }
+  ]
+}

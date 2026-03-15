@@ -1,0 +1,16 @@
+{
+  "components": [
+    {"id": "COMP-01", "name": "SanctionsEngine.ts", "description": "Core routing module that calls external watchlists and normalizes responses"},
+    {"id": "COMP-02", "name": "FuzzyMatchService", "description": "Calculates Levenshtein distance on names"},
+    {"id": "COMP-03", "name": "ComplianceLogger", "description": "Immutably writes all checks to WORM storage for FCA audit"},
+    {"id": "COMP-04", "name": "ExceptionRouter", "description": "Pushes pending applications to the manual review queue UI"}
+  ],
+  "test_cases": [
+    {"id": "TC-012", "description": "Verify exact match on UN sanctions list returns hard reject"},
+    {"id": "TC-013", "description": "Verify exact match on OFAC list returns hard reject"},
+    {"id": "TC-014", "description": "Verify 85% fuzzy match routes to manual queue"},
+    {"id": "TC-015", "description": "Verify 70% fuzzy match clears automatically"},
+    {"id": "TC-020", "description": "Verify timestamp and user ID appended to FCA log"},
+    {"id": "TC-021", "description": "Verify FCA log cannot be deleted or modified"}
+  ]
+}
