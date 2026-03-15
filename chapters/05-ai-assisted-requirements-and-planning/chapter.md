@@ -943,6 +943,146 @@ an optimal sprint.
 
 ---
 
+## 5.7 AI Tools for Requirements & Planning
+
+The tooling landscape for AI-assisted requirements engineering has matured rapidly. Rather than providing an exhaustive product review — which would date within months — this section maps the **categories of tools** available and highlights the paradigm shifts that matter most for enterprise teams.
+
+### The Spec-Driven Development Paradigm: AWS Kiro
+
+The most significant tooling shift in requirements engineering is the emergence of **spec-driven development** — the idea that specifications are not just documentation artifacts but **executable contracts** that bridge requirements to code.
+
+**AWS Kiro** (launched in public preview at AWS Summit NYC, July 2025) is the poster child for this paradigm. Built on Amazon Bedrock, Kiro is an AI-powered IDE that reverses the typical "code first, document later" workflow:
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│           KIRO: SPEC-DRIVEN DEVELOPMENT WORKFLOW             │
+│                                                              │
+│  ┌──────────────┐   Step 1: Requirements                     │
+│  │ Natural       │   • Developer describes feature in         │
+│  │ Language      │     plain English                          │
+│  │ Prompt        │   • Kiro generates structured specs:       │
+│  └──────┬───────┘     user stories + acceptance criteria      │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌──────────────┐   Step 2: Design                           │
+│  │ Technical     │   • Kiro creates architecture document     │
+│  │ Design Doc    │   • Component diagrams, API contracts      │
+│  └──────┬───────┘   • Developer reviews and refines           │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌──────────────┐   Step 3: Implementation Tasks              │
+│  │ Task List     │   • Kiro generates trackable tasks         │
+│  │               │   • Each task links back to spec/story     │
+│  └──────┬───────┘   • Built-in traceability                   │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌──────────────┐   Step 4: Code Generation                   │
+│  │ Production    │   • Code generated from specs, not prompts  │
+│  │ Code          │   • Agent hooks auto-run tests, docs        │
+│  └──────────────┘   • Specs remain the source of truth         │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+```
+
+**Why Kiro matters for requirements teams:**
+
+| Traditional AI Coding | Spec-Driven (Kiro) |
+|----------------------|--------------------|
+| Prompt → Code (specs are optional) | Prompt → Spec → Design → Tasks → Code |
+| Specifications drift from code | Specs are the source of truth; code derives from them |
+| Traceability is manual | Traceability is built-in (requirement → task → code) |
+| "Vibe coding" — fast but fragile | Structured — slower to start but production-grade output |
+| Developer-centric | Bridges BA/PO and developer workflows |
+
+**Key features relevant to Chapter 5:**
+- **Specs:** Converts natural language into structured requirements, user stories with acceptance criteria, and technical design documents
+- **Agent Hooks:** Automated triggers that execute on file changes — running tests, updating documentation, validating specs against code
+- **Steering Files:** Context management that keeps AI aligned with project conventions and architecture decisions
+
+> 💡 **Enterprise Insight:** Kiro's spec-driven approach addresses the biggest criticism of AI-assisted development: that LLMs generate code that *works* but doesn't align with *requirements*. By making the specification the input (not the prompt), Kiro forces a requirements-first discipline that aligns with everything we've discussed in this chapter.
+
+### Tools Landscape by Pipeline Stage
+
+The following table maps current tools to the stages of the requirements pipeline covered in this chapter:
+
+| Pipeline Stage | Tool Category | Current Tools (2025) | What They Do |
+|---------------|--------------|---------------------|-------------|
+| **Stakeholder Discovery & Elicitation** (§5.1) | Meeting AI | Otter.ai, Fireflies.ai, Microsoft Copilot for Teams | Transcribe, summarize, extract action items and requirements from meetings |
+| **Requirements Documentation** (§5.1) | AI Documentation | Notion AI, Confluence AI (Atlassian Intelligence) | Draft PRDs, structure requirements, summarize stakeholder feedback |
+| **User Story Generation** (§5.2) | General-purpose LLMs | ChatGPT, Claude, Gemini | Generate user stories, acceptance criteria, edge cases from descriptions |
+| **Spec-Driven Development** (§5.3) | AI IDEs | AWS Kiro, GitHub Copilot Workspace | Convert natural-language specs into design docs, tasks, and code |
+| **Specification Analysis** (§5.3) | Code-aware AI | GitHub Copilot Workspace, Cursor | Analyze specs against codebase, identify gaps, suggest changes |
+| **Estimation & Planning** (§5.4) | AI Project Management | ZenHub AI, Jira AI (Atlassian Intelligence) | Story point prediction, sprint velocity forecasting, capacity planning |
+| **Backlog Management** (§5.5) | AI-native PM | Linear AI, Shortcut AI, Jira AI | Duplicate detection, prioritization, epic decomposition, dependency mapping |
+| **Roadmap Planning** | Product Discovery | Jira Product Discovery, Productboard AI | Feature prioritization, roadmap generation, stakeholder feedback analysis |
+
+### GitHub Copilot Workspace: From Issue to Implementation
+
+While Kiro starts from natural language, **GitHub Copilot Workspace** starts from GitHub Issues — making it a natural bridge between requirements (tracked as issues) and implementation:
+
+1. **Task:** Developer selects a GitHub issue (requirement)
+2. **Spec:** Copilot generates a specification describing current vs. desired state
+3. **Plan:** Copilot creates a step-by-step implementation plan (files to create/modify)
+4. **Code:** Copilot generates multi-file code changes as editable diffs
+
+The human-in-the-loop approach ensures developers review and refine at every stage — mirroring the AI-augmentation philosophy of this chapter.
+
+### Atlassian Intelligence: AI in the Enterprise PM Stack
+
+For teams already using Jira and Confluence, **Atlassian Intelligence** (powered by Rovo AI) brings AI capabilities directly into the existing workflow:
+
+- **AI Work Breakdown:** Automatically decomposes epics into user stories and sub-tasks
+- **Natural Language to JQL:** Search backlogs using plain English instead of query syntax
+- **Requirement Quality Checks:** Detects duplicate or conflicting requirements across the backlog
+- **Predictive Analytics:** Uses historical project data to forecast timelines and identify risks
+- **Test Case Generation:** Generates structured test cases linked to Jira tickets
+
+> ⚠️ **Tool Selection Guidance:** Don't choose tools based on feature lists alone. The most important criteria for enterprise adoption are:
+> 1. **Data residency and privacy** — Where does your requirements data go? Can you use a private LLM deployment?
+> 2. **Integration with existing workflows** — Does the tool connect to your Jira/Azure DevOps/GitHub ecosystem?
+> 3. **Auditability** — Can you trace AI-generated artifacts back to their inputs for compliance?
+> 4. **Team adoption** — Will BAs, POs, and developers actually use it, or is it another shelfware purchase?
+
+### The Convergence Trend
+
+The most important trend to watch is **convergence**: tools that historically served only developers (IDEs, code assistants) are moving upstream into requirements and planning, while tools that served only project managers (Jira, Linear) are adding AI capabilities that touch code.
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│           TOOL CONVERGENCE IN REQUIREMENTS & PLANNING        │
+│                                                              │
+│  REQUIREMENTS TOOLS                  DEVELOPER TOOLS         │
+│  ──────────────────                  ───────────────          │
+│  Jira / Linear ─────┐        ┌───── GitHub Copilot           │
+│  Notion AI ─────────┤        ├───── AWS Kiro                 │
+│  Productboard ──────┤   ▼▲   ├───── Cursor                   │
+│  Confluence AI ─────┘        └───── Windsurf                 │
+│                      │      │                                │
+│                 ┌────▼──────▼────┐                           │
+│                 │  CONVERGENCE   │                            │
+│                 │  ZONE          │                            │
+│                 │                │                            │
+│                 │ • Specs as code│                            │
+│                 │ • AI-generated │                            │
+│                 │   traceability │                            │
+│                 │ • Bi-directional│                           │
+│                 │   sync between │                            │
+│                 │   requirements │                            │
+│                 │   and code     │                            │
+│                 └────────────────┘                            │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+```
+
+This convergence means that the *separation* between "requirements phase" and "development phase" is dissolving. Specs-as-code tools like Kiro and Copilot Workspace make requirements living artifacts that evolve with the codebase — exactly what standards like IEEE 830 always envisioned, but now achievable through AI.
+
+### References
+- AWS (2025). "Introducing Kiro — AI-Powered IDE for Spec-Driven Development." [https://kiro.dev](https://kiro.dev)
+- GitHub (2025). "GitHub Copilot Workspace: From Issue to Code." [https://githubnext.com/projects/copilot-workspace](https://githubnext.com/projects/copilot-workspace)
+- Atlassian (2025). "Atlassian Intelligence — AI for Teamwork." [https://www.atlassian.com/platform/ai](https://www.atlassian.com/platform/ai)
+
+---
+
 ## Governance Considerations for AI in Requirements
 
 While this chapter demonstrates the power of AI across the requirements pipeline, it's essential to acknowledge the risks specific to this phase. Requirements errors have the highest cost multiplier in the SDLC — a hallucinated requirement that survives to production can be 100x more expensive to fix than one caught during elicitation.
@@ -1006,8 +1146,18 @@ While this chapter demonstrates the power of AI across the requirements pipeline
 12. Jørgensen, M. (2004). "A Review of Studies on Expert Estimation of Software Development Effort." *JSS*, 70(1-2). [https://doi.org/10.1016/S0164-1212(02)00156-5](https://doi.org/10.1016/S0164-1212(02)00156-5)
 
 ### Tools & Platforms
-13. Jira AI Features (2025). "AI-Powered Project Planning." [https://www.atlassian.com/software/jira/ai](https://www.atlassian.com/software/jira/ai)
+13. AWS Kiro (2025). "Spec-Driven Development IDE." [https://kiro.dev](https://kiro.dev)
 
-14. ZenHub AI (2025). "AI Sprint Planning and Estimation." [https://www.zenhub.com/ai](https://www.zenhub.com/ai)
+14. GitHub Copilot Workspace (2025). "From Issue to Code." [https://githubnext.com/projects/copilot-workspace](https://githubnext.com/projects/copilot-workspace)
 
-15. Linear (2025). "AI-Powered Project Management." [https://linear.app/features](https://linear.app/features)
+15. Atlassian Intelligence (2025). "AI-Powered Teamwork." [https://www.atlassian.com/platform/ai](https://www.atlassian.com/platform/ai)
+
+16. Jira AI Features (2025). "AI-Powered Project Planning." [https://www.atlassian.com/software/jira/ai](https://www.atlassian.com/software/jira/ai)
+
+17. ZenHub AI (2025). "AI Sprint Planning and Estimation." [https://www.zenhub.com/ai](https://www.zenhub.com/ai)
+
+18. Linear (2025). "AI-Powered Project Management." [https://linear.app/features](https://linear.app/features)
+
+19. Notion AI (2025). "AI-Powered Workspace." [https://www.notion.so/product/ai](https://www.notion.so/product/ai)
+
+20. Productboard AI (2025). "AI-Powered Product Management." [https://www.productboard.com/ai](https://www.productboard.com/ai)
