@@ -1,0 +1,23 @@
+[Meeting: GlobalBank Corporate Onboarding Platform Kickoff]
+[Date: 2026-03-02]
+[Attendees: David (RM, Sales), Sarah (Compliance Officer), Elena (Risk Analyst), Alex (Product Manager)]
+
+Alex (PM): Alright team, let's talk about the new Corporate Onboarding platform. David, from the sales perspective, what's our biggest pain point today?
+
+David (RM): Honestly, it's the 24-day turnaround time. When I bring a mid-market corporate client to the table, they expect a digital experience. Instead, we're asking them to email PDFs of their articles of incorporation, utility bills for directors, and shareholder registers. Half the time the PDFs are blurry. We need a secure document upload portal, and we need to cut onboarding down to under 3 days. If we don't, we lose them to the neobanks.
+
+Sarah (Compliance): I hear you, David, but we can't compromise on UK FCA regulations. The reason it takes 24 days is because we have to manually verify the Ultimate Beneficial Owners (UBOs) behind complex shell companies. If a single UBO holding more than 25% equity is on a sanctions list or is a PEP (Politically Exposed Person), and we onboard them, the bank faces massive fines. 
+
+Alex (PM): Okay, so we need automated AML screening. What are the specific Watchlists we need to hit?
+
+Sarah (Compliance): We need real-time API integrations with OFAC, the UN sanctions list, and the UK consolidated list. We also need to run negative media checks to see if they've been in the news for fraud or money laundering. And every single check must leave an immutable audit trail. The FCA auditors will want to see exactly when we checked, what the result was, and who signed off.
+
+Elena (Risk): Adding to Sarah's point, my team needs to build the entity resolution graph. When a multinational corporation applies, they might have 5 layers of subsidiary ownership before we reach the actual human owners. The new system needs to automatically extract names from the uploaded shareholder documents and try to map out that ownership tree visually. Doing it in Excel is a nightmare.
+
+David (RM): And what happens if the automated checks fail? Or if it's a fuzzy match? We can't just reject the client.
+
+Sarah (Compliance): If it's a fuzzy match—say, over 80% confidence—the system should put the application into a "Pending Review" queue for my team. We will manually review it and make a decision. But if there's a 100% exact match on an OFAC list, it should be an immediate hard rejection. 
+
+Elena (Risk): From a non-functional perspective, we process about 500 corporate applications a month right now, but with the new digital push, we expect that to hit 2,000. So the platform needs to handle that scale. Also, any PII (Personally Identifiable Information) like passport scans must be encrypted at rest and in transit.
+
+Alex (PM): Perfect. So: document upload portal, automated UBO extraction, real-time sanctions and PEP screening, visual ownership trees, a manual review queue, and strict audit logging. 
