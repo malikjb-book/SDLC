@@ -1,0 +1,16 @@
+Data Model Requirements: GlobalBank Entity Resolution
+
+We need to design a relational database schema (for PostgreSQL) to store the results of the Intelligent Document Processing (IDP) phase.
+
+Entities to track:
+1. OnboardingApplication: Tracks the overall request (ID, status, submitted_date, risk_score).
+2. LegalEntity: A registered company (Name, RegistrationNumber, Jurisdiction, TaxID). An application can have multiple legal entities if it's a complex group.
+3. NaturalPerson: A human being (FirstName, LastName, DateOfBirth, Nationality).
+4. OwnershipLink: The critical join table representing the corporate graph. Links a NaturalPerson or a LegalEntity to another LegalEntity, including the `OwnershipPercentage` and `IsUBO` boolean.
+5. ScreeningResult: The result of pinging the AML provider (Hit/No Hit, ProviderName, Timestamp) associated with a NaturalPerson or LegalEntity.
+
+Requirements:
+- All primary keys must be UUIDs.
+- Need audit columns (created_at, updated_at) on all tables.
+- Soft deletes are required for LegalEntity and NaturalPerson (deleted_at).
+- Must enforce a unique constraint on LegalEntity's RegistrationNumber + Jurisdiction.

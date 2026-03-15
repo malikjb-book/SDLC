@@ -1,0 +1,15 @@
+Risk Decisioning API Integration
+
+We need an internal REST API for the frontend onboarding app to communicate with the Risk Decisioning Engine.
+
+Endpoints Needed:
+1. Submit an application for risk scoring. Needs to accept the Application ID and the identified UBO list.
+2. Check the status of a risk score (since scoring can be asynchronous if it hits a manual queue).
+3. Webhook endpoint to receive asynchronous updates from the external AML provider (World-Check).
+
+Constraints:
+- Must use standard HTTP status codes.
+- Response must include a standard envelope: { "status": "success|error", "data": {}, "metadata": {} }
+- Must support correlation IDs via headers for distributed tracing (`X-Correlation-ID`).
+- Authentication via JWT Bearer tokens.
+- Rate limit to 100 requests per minute per tenant.

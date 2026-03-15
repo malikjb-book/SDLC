@@ -1,0 +1,16 @@
+GlobalBank Corporate Onboarding Platform
+
+Core Requirements:
+- Ingest corporate documentation (PDF, images) for new entity onboarding.
+- Perform Real-Time Entity Resolution to identify the corporate hierarchy and Ultimate Beneficial Owners (UBOs).
+- Screen all identified entities and individuals against UK FCA sanctions lists, adverse media, and PEP lists via external API (World-Check/ComplyAdvantage).
+- Generate a holistic risk score.
+- If passed, automatically provision accounts in the legacy core banking system.
+
+Scale & Constraints:
+- Expected volume: 5,000 corporate onboarding applications per month.
+- Document processing: Up to 50 pages per application.
+- SLA: End-to-end automated decision (if no manual review needed) must be under 30 seconds.
+- Team: 12 engineers, strong in Java/Spring Boot and React.
+- Deployment: AWS cloud, but must comply with strictly regulated data residency requirements (UK region only).
+- Database: Needs to handle complex graph relationships for the corporate hierarchy, plus document storage.

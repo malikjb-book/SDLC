@@ -1,0 +1,17 @@
+Pull Request: Implement Event Broker for Compliance Audit Logging
+
+Description:
+We need a highly reliable message broker to stream all KYC/AML screening events from the Sanctions Engine to the Compliance WORM (Write Once Read Many) storage for FCA auditing.
+
+Requirements:
+- Guaranteed exactly-once delivery semantics (we cannot lose a single compliance log).
+- Throughput is moderate (around 500 events/second at peak) but spikes during batch processing.
+- Multi-consumer support: The events will be read by the WORM logger, but also by a real-time Fraud Detection graph database.
+- Retention: Need to retain messages for 14 days replayability in case the WORM storage goes down.
+
+Options discussed in the comments:
+1. Amazon SQS + SNS: Easiest to set up, but SNS->SQS doesn't easily support exactly-once or 14-day replayability natively without complex DLQ management.
+2. Apache Kafka (AWS MSK): Overkill for 500 msg/sec? But provides exactly-once and great replay. High operational cost ($$$).
+3. Amazon Kinesis Data Streams: Good middle ground. Supports multi-consumer and 14-day retention. AWS managed.
+
+Let's discuss which way to go before I wire up the producers.
