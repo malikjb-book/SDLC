@@ -1,4 +1,4 @@
-# Chapter 6: AI-Powered Design & Architecture
+# Chapter 7: AI-Powered Design & Architecture
 
 > *"Architecture is the decisions that are hard to change. AI doesn't make those decisions less important — it makes exploring the decision space faster, so you can make better decisions with more evidence and less guesswork."*
 > — Martin Fowler, adapted for the AI era
@@ -967,3 +967,4 @@ Review the following database schema for:
 11. InfraSketch (2025). "AI Architecture Diagramming." [https://infrasketch.net](https://infrasketch.net)
 
 12. Eraser.io (2025). "AI-First Technical Diagramming." [https://www.eraser.io](https://www.eraser.io)
+

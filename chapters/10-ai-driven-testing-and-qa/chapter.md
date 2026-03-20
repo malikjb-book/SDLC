@@ -1,4 +1,4 @@
-# Chapter 9: AI-Driven Testing & QA
+# Chapter 10: AI-Driven Testing & QA
 
 > *"Testing is the one area where AI doesn't just speed things up — it fundamentally changes what's possible. Tests that would take a human team weeks to conceive can be generated in minutes."*
 > — Forrester, "AI in Software Testing" Report, 2025
@@ -955,3 +955,4 @@ Generate integration tests for the following API endpoint:
 15. Healenium (2025). "Self-Healing Test Automation." [https://healenium.io](https://healenium.io)
 
 16. DORA Team, Google Cloud (2025). "The 2025 State of AI-Assisted Software Development." [https://dora.dev/research/2025/](https://dora.dev/research/2025/)
+

@@ -1,4 +1,4 @@
-# Chapter 5: AI-Assisted Requirements & Planning
+# Chapter 6: AI-Assisted Requirements & Planning
 
 > *"The cost of fixing a defect in requirements is 100x cheaper than fixing it in production. AI doesn't change this math — it amplifies it. If AI helps you get requirements right, the leverage is enormous. If AI hallucinates requirements, the damage is catastrophic."*
 > — Barry Boehm's cost escalation principle, extended for the AI era
@@ -1161,3 +1161,4 @@ While this chapter demonstrates the power of AI across the requirements pipeline
 19. Notion AI (2025). "AI-Powered Workspace." [https://www.notion.so/product/ai](https://www.notion.so/product/ai)
 
 20. Productboard AI (2025). "AI-Powered Product Management." [https://www.productboard.com/ai](https://www.productboard.com/ai)
+
