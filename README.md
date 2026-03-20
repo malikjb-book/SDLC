@@ -103,4 +103,4 @@ SDLC/
 
 ## License
 
-This work is licensed under TBD
+This work is licensed under the [MIT License](LICENSE).
