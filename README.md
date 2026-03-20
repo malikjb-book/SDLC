@@ -19,17 +19,18 @@ Whether you're a developer, engineering leader, or process architect, this book 
 | 2 | [SDLC Fundamentals](chapters/02-sdlc-fundamentals/chapter.md) | Waterfall, Agile, Lean, DevOps — phases and artifacts |
 | 3 | [Modern SDLC Models](chapters/03-modern-sdlc-models/chapter.md) | Continuous delivery, platform engineering, DevSecOps |
 | 4 | [AI Landscape for Software Engineering](chapters/04-ai-landscape-for-software-engineering/chapter.md) | LLMs, foundation models, copilots, agents, tool taxonomy |
-| 5 | [AI-Assisted Requirements & Planning](chapters/05-ai-assisted-requirements-and-planning/chapter.md) | Story generation, spec analysis, estimation |
-| 6 | [AI-Powered Design & Architecture](chapters/06-ai-powered-design-and-architecture/chapter.md) | Architecture recommendations, design doc generation |
-| 7 | [Coding Agents & AI Pair Programming](chapters/07-coding-agents-and-ai-pair-programming/chapter.md) | Copilot, Cursor, Cline, Windsurf, MCP, agentic coding |
-| 8 | [AI-Augmented Code Review & Quality](chapters/08-ai-augmented-code-review-and-quality/chapter.md) | Automated review, refactoring, tech debt detection |
-| 9 | [AI-Driven Testing & QA](chapters/09-ai-driven-testing-and-qa/chapter.md) | Test generation, mutation testing, visual regression |
-| 10 | [Intelligent CI/CD & DevOps](chapters/10-intelligent-cicd-and-devops/chapter.md) | Pipeline optimization, predictive builds, IaC |
-| 11 | [AI for Deployment, Monitoring & Ops](chapters/11-ai-for-deployment-monitoring-and-operations/chapter.md) | AIOps, anomaly detection, self-healing systems |
-| 12 | [Developer Experience & Tooling](chapters/12-developer-experience-and-tooling/chapter.md) | IDE integration, CLI tools, productivity measurement |
-| 13 | [Governance, Security & Responsible AI](chapters/13-governance-security-and-responsible-ai-in-sdlc/chapter.md) | IP/licensing, code provenance, AI safety in SDLC |
-| 14 | [Measuring SDLC Maturity & ROI](chapters/14-measuring-sdlc-maturity-and-roi/chapter.md) | DORA metrics, maturity models, cost-benefit analysis |
-| 15 | [Case Studies & Adoption Playbook](chapters/15-case-studies-and-adoption-playbook/chapter.md) | Real-world implementations, adoption roadmap |
+| 5 | [AI-Powered Product Development Lifecycle](chapters/04-ai-landscape-for-software-engineering/chapter.md) | Discovery, viability, Kiro, QuantumBlack, PDLC, spec-driven development |
+| 6 | [AI-Assisted Requirements & Planning](chapters/05-ai-assisted-requirements-and-planning/chapter.md) | Story generation, spec analysis, estimation |
+| 7 | [AI-Powered Design & Architecture](chapters/06-ai-powered-design-and-architecture/chapter.md) | Architecture recommendations, design doc generation |
+| 8 | [Coding Agents & AI Pair Programming](chapters/07-coding-agents-and-ai-pair-programming/chapter.md) | Copilot, Cursor, Cline, Windsurf, MCP, agentic coding |
+| 9 | [AI-Augmented Code Review & Quality](chapters/08-ai-augmented-code-review-and-quality/chapter.md) | Automated review, refactoring, tech debt detection |
+| 10 | [AI-Driven Testing & QA](chapters/09-ai-driven-testing-and-qa/chapter.md) | Test generation, mutation testing, visual regression |
+| 11 | [Intelligent CI/CD & DevOps](chapters/10-intelligent-cicd-and-devops/chapter.md) | Pipeline optimization, predictive builds, IaC |
+| 12 | [AI for Deployment, Monitoring & Ops](chapters/11-ai-for-deployment-monitoring-and-operations/chapter.md) | AIOps, anomaly detection, self-healing systems |
+| 13 | [Developer Experience & Tooling](chapters/12-developer-experience-and-tooling/chapter.md) | IDE integration, CLI tools, productivity measurement |
+| 14 | [Governance, Security & Responsible AI](chapters/13-governance-security-and-responsible-ai-in-sdlc/chapter.md) | IP/licensing, code provenance, AI safety in SDLC |
+| 15 | [Measuring SDLC Maturity & ROI](chapters/14-measuring-sdlc-maturity-and-roi/chapter.md) | DORA metrics, maturity models, cost-benefit analysis |
+| 16 | [Case Studies & Adoption Playbook](chapters/15-case-studies-and-adoption-playbook/chapter.md) | Real-world implementations, adoption roadmap |
 
 ### Appendices
 
