@@ -1,4 +1,4 @@
-# Chapter 8: Coding Agents & AI Pair Programming
+# Chapter 9: Coding Agents & AI Pair Programming
 
 > *"The role of software engineers is evolving from writing every line of code to orchestrating systems of agents, focusing on architecture and strategy."*
 > — Anthropic Engineering Blog, 2025
@@ -839,4 +839,5 @@ Please:
 15. GitHub Copilot Documentation. [https://docs.github.com/en/copilot](https://docs.github.com/en/copilot)
 
 16. Cursor Documentation. [https://docs.cursor.com](https://docs.cursor.com)
+
 

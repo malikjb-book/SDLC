@@ -1,4 +1,4 @@
-# Chapter 11: Intelligent CI/CD & DevOps
+# Chapter 12: Intelligent CI/CD & DevOps
 
 > *"By 2027, AI is projected to replace 80% of manual reliability work — not just identifying problems but increasingly fixing them."*
 > — SRE Industry Forecast, 2025
@@ -838,4 +838,5 @@ Output:
 15. Spacelift (2025). "AI-Powered Infrastructure Management." [https://spacelift.io](https://spacelift.io)
 
 16. Firefly.ai (2025). "AI-Powered Cloud Asset Management." [https://www.firefly.ai](https://www.firefly.ai)
+
 

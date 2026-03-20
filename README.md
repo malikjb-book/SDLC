@@ -19,18 +19,23 @@ Whether you're a developer, engineering leader, or process architect, this book 
 | 2 | [SDLC Fundamentals](chapters/02-sdlc-fundamentals/chapter.md) | Waterfall, Agile, Lean, DevOps — phases and artifacts |
 | 3 | [Modern SDLC Models](chapters/03-modern-sdlc-models/chapter.md) | Continuous delivery, platform engineering, DevSecOps |
 | 4 | [AI Landscape for Software Engineering](chapters/04-ai-landscape-for-software-engineering/chapter.md) | LLMs, foundation models, copilots, agents, tool taxonomy |
-| 5 | [AI-Powered Product Development Lifecycle](chapters/05-ai-powered-product-development-lifecycle/chapter.md) | Discovery, viability, Kiro, QuantumBlack, PDLC, spec-driven development |
+| 5 | [AI-Powered Product Development Lifecycle (PDLC)](chapters/05-ai-powered-product-development-lifecycle/chapter.md) | Discovery, viability, build — Kiro, QuantumBlack/McKinsey PDLC, spec-driven development |
 | 6 | [AI-Assisted Requirements & Planning](chapters/06-ai-assisted-requirements-and-planning/chapter.md) | Story generation, spec analysis, estimation |
 | 7 | [AI-Powered Design & Architecture](chapters/07-ai-powered-design-and-architecture/chapter.md) | Architecture recommendations, design doc generation |
-| 8 | [Coding Agents & AI Pair Programming](chapters/08-coding-agents-and-ai-pair-programming/chapter.md) | Copilot, Cursor, Cline, Windsurf, MCP, agentic coding |
-| 9 | [AI-Augmented Code Review & Quality](chapters/09-ai-augmented-code-review-and-quality/chapter.md) | Automated review, refactoring, tech debt detection |
-| 10 | [AI-Driven Testing & QA](chapters/10-ai-driven-testing-and-qa/chapter.md) | Test generation, mutation testing, visual regression |
-| 11 | [Intelligent CI/CD & DevOps](chapters/11-intelligent-cicd-and-devops/chapter.md) | Pipeline optimization, predictive builds, IaC |
-| 12 | [AI for Deployment, Monitoring & Ops](chapters/12-ai-for-deployment-monitoring-and-operations/chapter.md) | AIOps, anomaly detection, self-healing systems |
-| 13 | [Developer Experience & Tooling](chapters/13-developer-experience-and-tooling/chapter.md) | IDE integration, CLI tools, productivity measurement |
-| 14 | [Governance, Security & Responsible AI](chapters/14-governance-security-and-responsible-ai-in-sdlc/chapter.md) | IP/licensing, code provenance, AI safety in SDLC |
-| 15 | [Measuring SDLC Maturity & ROI](chapters/15-measuring-sdlc-maturity-and-roi/chapter.md) | DORA metrics, maturity models, cost-benefit analysis |
-| 16 | [Case Studies & Adoption Playbook](chapters/16-case-studies-and-adoption-playbook/chapter.md) | Real-world implementations, adoption roadmap |
+| 8 | [AI-Powered Data Engineering & Platform Architecture](chapters/08-ai-powered-data-engineering-and-platform-architecture/chapter.md) | Data modelling, pipelines, event streams, synthetic data, vector DBs, document processing, data quality automation |
+| 9 | [Coding Agents & AI Pair Programming](chapters/09-coding-agents-and-ai-pair-programming/chapter.md) | Copilot, Cursor, Claude Code, Windsurf, agentic coding |
+| 10 | [AI-Augmented Code Review & Quality](chapters/10-ai-augmented-code-review-and-quality/chapter.md) | Automated review, refactoring, tech debt detection |
+| 11 | [AI-Driven Testing & QA](chapters/11-ai-driven-testing-and-qa/chapter.md) | Test generation, mutation testing, visual regression |
+| 12 | [Intelligent CI/CD & DevOps](chapters/12-intelligent-cicd-and-devops/chapter.md) | Pipeline optimization, predictive builds, IaC |
+| 13 | [AI for Deployment, Monitoring & Ops](chapters/13-ai-for-deployment-monitoring-and-operations/chapter.md) | AIOps, anomaly detection, self-healing systems |
+| 14 | [AI Agents in Production: Orchestration & Reliability](chapters/14-ai-agents-in-production-orchestration-and-reliability/chapter.md) | Agentic AI as product components, orchestration patterns, human-in-the-loop, guardrails, reliability engineering for non-deterministic systems |
+| 15 | [Developer Experience & Tooling](chapters/15-developer-experience-and-tooling/chapter.md) | IDE integration, CLI tools, productivity measurement |
+| 16 | [AI-Driven Documentation & Knowledge Management](chapters/16-ai-driven-documentation-and-knowledge-management/chapter.md) | Living architecture decision records, auto-generated API docs, runbooks, onboarding guides, compliance audit trails, tribal knowledge capture |
+| 17 | [Governance, Security & Responsible AI](chapters/17-governance-security-and-responsible-ai-in-sdlc/chapter.md) | IP/licensing, code provenance, AI safety in SDLC |
+| 18 | [AI Economics: Build vs. Buy, Cost Modelling & Vendor Strategy](chapters/18-ai-economics-build-vs-buy-cost-modelling-and-vendor-strategy/chapter.md) | Token cost modelling, AI tool TCO analysis, build-vs-buy frameworks, vendor lock-in avoidance, enterprise procurement, ROI calculators |
+| 19 | [Measuring SDLC Maturity & ROI](chapters/19-measuring-sdlc-maturity-and-roi/chapter.md) | DORA metrics, maturity models, cost-benefit analysis |
+| 20 | [AI and Legacy Modernisation](chapters/20-ai-and-legacy-modernisation/chapter.md) | AI-assisted code comprehension, automated refactoring, strangler-fig patterns, COBOL/mainframe migration, legacy-to-cloud, technical debt remediation |
+| 21 | [Case Studies & Adoption Playbook](chapters/21-case-studies-and-adoption-playbook/chapter.md) | Real-world implementations, adoption roadmap |
 
 ### Appendices
 

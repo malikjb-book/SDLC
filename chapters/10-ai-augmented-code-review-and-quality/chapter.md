@@ -1,4 +1,4 @@
-# Chapter 9: AI-Augmented Code Review & Quality
+# Chapter 10: AI-Augmented Code Review & Quality
 
 > *"AI code review doesn't replace human reviewers — it frees them to focus on what only humans can evaluate: architectural fitness, business logic correctness, and maintainability in the long term."*
 > — Microsoft Developer Division, 2025
@@ -730,4 +730,5 @@ Research shows that AI-generated code often contains **more subtle bugs** — co
 15. CISQ (2022). "The Cost of Poor Software Quality in the US." *Consortium for IT Software Quality*. [https://www.it-cisq.org](https://www.it-cisq.org)
 
 16. DORA Team, Google Cloud (2025). "The 2025 State of AI-Assisted Software Development." [https://dora.dev/research/2025/](https://dora.dev/research/2025/)
+
 

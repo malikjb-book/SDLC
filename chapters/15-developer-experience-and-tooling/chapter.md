@@ -1,4 +1,4 @@
-# Chapter 13: Developer Experience & Tooling
+# Chapter 15: Developer Experience & Tooling
 
 > *"Developer experience is the strongest predictor of productivity — stronger than team size, technology stack, or organizational structure."*
 > — Stack Overflow Developer Survey, 2024
@@ -950,4 +950,5 @@ The AI toolkit is reshaping what it means to be a developer:
 18. Anthropic (2025). "Claude Code Documentation." [https://docs.anthropic.com/en/docs/claude-code](https://docs.anthropic.com/en/docs/claude-code)
 
 19. AWS (2025). "Amazon Q Developer." [https://aws.amazon.com/q/developer/](https://aws.amazon.com/q/developer/)
+
 
