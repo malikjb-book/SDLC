@@ -1,4 +1,4 @@
-# Chapter 21: Case Studies & Adoption Playbook
+# Chapter 22: Case Studies & Adoption Playbook
 
 ## Overview
 
@@ -48,5 +48,6 @@ Theory meets practice. This chapter presents real-world case studies of organiza
 ## Further Reading
 
 - *TODO: Add references*
+
 
 

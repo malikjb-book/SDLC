@@ -1,4 +1,4 @@
-# Chapter 17: Governance, Security & Responsible AI in SDLC
+# Chapter 18: Governance, Security & Responsible AI in SDLC
 
 > *"AI doesn't just introduce new capabilities into the SDLC — it introduces new categories of risk. Every line of AI-generated code is a line no human deliberately wrote, yet your organization is fully liable for it."*
 > — OWASP Foundation, Top 10 for LLM Applications, 2025
@@ -904,5 +904,6 @@ src/healthcare/phi/**
 17. GitHub (2025). "Copilot Privacy Statement." [https://docs.github.com/en/copilot/overview/github-copilot-privacy-statement](https://docs.github.com/en/copilot/overview/github-copilot-privacy-statement)
 
 18. GitHub (2025). "Copilot Trust Center." [https://resources.github.com/copilot-trust-center/](https://resources.github.com/copilot-trust-center/)
+
 
 

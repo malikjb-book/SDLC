@@ -1,4 +1,4 @@
-# Chapter 19: Measuring SDLC Maturity & ROI
+# Chapter 20: Measuring SDLC Maturity & ROI
 
 > *"What gets measured gets managed — but what gets mismeasured gets broken. Applying the wrong metrics to AI-augmented software development is worse than measuring nothing at all, because it creates perverse incentives that actively undermine the benefits AI is supposed to deliver."*
 > — Adapted from Peter Drucker and Nicole Forsgren (DORA)
@@ -737,5 +737,6 @@ based on Phase 1 ROI validation.
 13. Gartner (2025). "Hype Cycle for AI in Software Engineering." [https://www.gartner.com](https://www.gartner.com)
 
 14. Forrester (2025). "The Total Economic Impact of GitHub Copilot Enterprise." [https://www.forrester.com](https://www.forrester.com)
+
 
 

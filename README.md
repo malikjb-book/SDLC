@@ -51,24 +51,25 @@ Whether you're a developer, engineering leader, or process architect, this book 
 |---|---------|-------------|
 | 14 | [AI Agents in Production: Orchestration & Reliability](chapters/14-ai-agents-in-production-orchestration-and-reliability/chapter.md) | Agentic AI as product components, orchestration patterns, human-in-the-loop, guardrails, reliability engineering for non-deterministic systems |
 
-### Part V — Cross-Cutting Concerns (Chapters 15–19)
+### Part V — Cross-Cutting Concerns (Chapters 15–20)
 > *Developer Experience → Documentation → Governance → Economics → Maturity/ROI*
 
 | # | Chapter | Description |
 |---|---------|-------------|
 | 15 | [Developer Experience & Tooling](chapters/15-developer-experience-and-tooling/chapter.md) | IDE integration, CLI tools, productivity measurement |
-| 16 | [AI-Driven Documentation & Knowledge Management](chapters/16-ai-driven-documentation-and-knowledge-management/chapter.md) | Living architecture decision records, auto-generated API docs, runbooks, onboarding guides, compliance audit trails, tribal knowledge capture |
-| 17 | [Governance, Security & Responsible AI](chapters/17-governance-security-and-responsible-ai-in-sdlc/chapter.md) | IP/licensing, code provenance, AI safety in SDLC |
-| 18 | [AI Economics: Build vs. Buy, Cost Modelling & Vendor Strategy](chapters/18-ai-economics-build-vs-buy-cost-modelling-and-vendor-strategy/chapter.md) | Token cost modelling, AI tool TCO analysis, build-vs-buy frameworks, vendor lock-in avoidance, enterprise procurement, ROI calculators |
-| 19 | [Measuring SDLC Maturity & ROI](chapters/19-measuring-sdlc-maturity-and-roi/chapter.md) | DORA metrics, maturity models, cost-benefit analysis |
+| 16 | [AI Agent Infrastructure: MCP, Tool Use & Enterprise Integration](chapters/16-ai-agent-infrastructure-mcp-tool-use-and-enterprise-integration/chapter.md) | Context Protocol (MCP), LLM tool use patterns, custom extensions, secure enterprise integrations and agent scaffolding |
+| 17 | [AI-Driven Documentation & Knowledge Management](chapters/17-ai-driven-documentation-and-knowledge-management/chapter.md) | Living architecture decision records, auto-generated API docs, runbooks, onboarding guides, compliance audit trails, tribal knowledge capture |
+| 18 | [Governance, Security & Responsible AI](chapters/18-governance-security-and-responsible-ai-in-sdlc/chapter.md) | IP/licensing, code provenance, AI safety in SDLC |
+| 19 | [AI Economics: Build vs. Buy, Cost Modelling & Vendor Strategy](chapters/19-ai-economics-build-vs-buy-cost-modelling-and-vendor-strategy/chapter.md) | Token cost modelling, AI tool TCO analysis, build-vs-buy frameworks, vendor lock-in avoidance, enterprise procurement, ROI calculators |
+| 20 | [Measuring SDLC Maturity & ROI](chapters/20-measuring-sdlc-maturity-and-roi/chapter.md) | DORA metrics, maturity models, cost-benefit analysis |
 
-### Part VI — Transformation & Adoption (Chapters 20–21)
+### Part VI — Transformation & Adoption (Chapters 21–22)
 > *Legacy modernisation → Case studies & adoption playbook*
 
 | # | Chapter | Description |
 |---|---------|-------------|
-| 20 | [AI and Legacy Modernisation](chapters/20-ai-and-legacy-modernisation/chapter.md) | AI-assisted code comprehension, automated refactoring, strangler-fig patterns, COBOL/mainframe migration, legacy-to-cloud, technical debt remediation |
-| 21 | [Case Studies & Adoption Playbook](chapters/21-case-studies-and-adoption-playbook/chapter.md) | Real-world implementations, adoption roadmap |
+| 21 | [AI and Legacy Modernisation](chapters/21-ai-and-legacy-modernisation/chapter.md) | AI-assisted code comprehension, automated refactoring, strangler-fig patterns, COBOL/mainframe migration, legacy-to-cloud, technical debt remediation |
+| 22 | [Case Studies & Adoption Playbook](chapters/22-case-studies-and-adoption-playbook/chapter.md) | Real-world implementations, adoption roadmap |
 
 ### Appendices
 
