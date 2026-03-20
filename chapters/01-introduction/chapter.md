@@ -174,22 +174,18 @@ In a labour market where talent retention is a critical challenge, these experie
 
 This book is structured to mirror the Software Development Lifecycle itself, progressing from foundational concepts through requirements, design, coding, testing, deployment, operations, and governance. Each chapter maps to one or more SDLC phases and demonstrates how AI tools and practices can be integrated at that stage.
 
-| Chapter | SDLC Phase | Key Topics |
-|---------|-----------|------------|
-| 2 | Fundamentals | Waterfall, Agile, Lean, DevOps — phases and artifacts |
-| 3 | Modern Models | Continuous delivery, platform engineering, DevSecOps |
-| 4 | AI Landscape | LLMs, foundation models, copilots, agents, tool taxonomy |
-| 5 | Requirements & Planning | AI-assisted story generation, spec analysis, estimation |
-| 6 | Design & Architecture | Architecture recommendations, AI-generated design docs |
-| 7 | Coding & Pair Programming | Copilot, Cursor, Claude Code, Windsurf, agentic coding |
-| 8 | Code Review & Quality | Automated review, refactoring, tech debt detection |
-| 9 | Testing & QA | AI test generation, mutation testing, visual regression |
-| 10 | CI/CD & DevOps | Pipeline optimisation, predictive builds, IaC |
-| 11 | Deployment & Ops | AIOps, anomaly detection, self-healing systems |
-| 12 | Developer Experience | IDE integration, CLI tools, productivity measurement |
-| 13 | Governance & Security | IP/licensing, code provenance, AI safety in SDLC |
-| 14 | Maturity & ROI | DORA metrics, maturity models, cost-benefit analysis |
-| 15 | Case Studies & Playbook | Real-world implementations, adoption roadmap |
+The diagram below — the **Agentic SDLC Architecture** — serves as the book's central visual thesis. It shows how specialised AI agents own each SDLC phase, connected by an enterprise context layer (MCP), governed by cross-cutting agents, and gated by human approval points. We return to this diagram in Chapter 14 (orchestration patterns) and Chapter 16 (infrastructure focus).
+
+> 📊 **[View: Agentic SDLC Architecture — The North Star](../../diagrams/agentic-sdlc-architecture-v1-north-star.html)**
+
+| Part | Chapters | Focus |
+|------|----------|-------|
+| **I — Foundations** | 0–4 | Context, history, and the AI tool landscape |
+| **II — Product Lifecycle** | 5 | PDLC: Discovery → Viability → Spec |
+| **III — SDLC Phases** | 6–13 | Requirements → Design → Data → Code → Review → Test → CI/CD → Deploy/Ops |
+| **IV — Production AI** | 14 | AI agents as product components: orchestration, reliability |
+| **V — Cross-Cutting Concerns** | 15–20 | DevEx → Agent Infra → Docs → Governance → Economics → Maturity/ROI |
+| **VI — Transformation & Adoption** | 21–22 | Legacy modernisation → Case studies & adoption playbook |
 
 ### The Running Use Case: CommercialEdge Bank
 
@@ -275,4 +271,4 @@ This continuity provides a coherent, cumulative learning experience that mirrors
 
 ---
 
-*Next: [Chapter 2 — SDLC Fundamentals](../Chapter_2_SDLC_Fundamentals/README.md)*
+*Next: [Chapter 2 — SDLC Fundamentals](../02-sdlc-fundamentals/chapter.md)*
