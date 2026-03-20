@@ -4,6 +4,8 @@
 
 The diagram below shows how each MCP resource (Core Banking API, Compliance DB, code standards, etc.) is consumed by specific agents across the SDLC pipeline, emphasising the infrastructure that makes context-aware agentic workflows possible.
 
-> 📊 **[View: Agentic SDLC Architecture — Infrastructure Focus](../../diagrams/agentic-sdlc-architecture-v2-infrastructure.html)**
+> 📊 **Figure 16.1 — Agentic SDLC Architecture: Infrastructure Focus**
+>
+> ![Agentic SDLC Architecture — Infrastructure Focus](../../diagrams/agentic-sdlc-v2-infrastructure.png)
 
 

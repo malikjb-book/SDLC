@@ -176,7 +176,9 @@ This book is structured to mirror the Software Development Lifecycle itself, pro
 
 The diagram below — the **Agentic SDLC Architecture** — serves as the book's central visual thesis. It shows how specialised AI agents own each SDLC phase, connected by an enterprise context layer (MCP), governed by cross-cutting agents, and gated by human approval points. We return to this diagram in Chapter 14 (orchestration patterns) and Chapter 16 (infrastructure focus).
 
-> 📊 **[View: Agentic SDLC Architecture — The North Star](../../diagrams/agentic-sdlc-architecture-v1-north-star.html)**
+> 📊 **Figure 1.1 — Agentic SDLC Architecture: The North Star**
+>
+> ![Agentic SDLC Architecture — The North Star](../../diagrams/agentic-sdlc-v1-north-star.png)
 
 | Part | Chapters | Focus |
 |------|----------|-------|

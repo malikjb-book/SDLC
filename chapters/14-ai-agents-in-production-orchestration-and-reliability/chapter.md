@@ -4,6 +4,8 @@
 
 The diagram below highlights the **orchestration patterns** that underpin the agentic SDLC pipeline: sequential pipeline flow, parallel supervisor (governance), fix-test loops, and graduated autonomy levels across phases.
 
-> 📊 **[View: Agentic SDLC Architecture — Orchestration Patterns](../../diagrams/agentic-sdlc-architecture-v3-orchestration.html)**
+> 📊 **Figure 14.1 — Agentic SDLC Architecture: Orchestration Patterns**
+>
+> ![Agentic SDLC Architecture — Orchestration Patterns](../../diagrams/agentic-sdlc-v3-orchestration.png)
 
 
