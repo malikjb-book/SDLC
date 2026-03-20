@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic SDLC Architecture — Orchestration Patterns (Ch 14)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --gray-bg: #F1EFE8; --gray-border: #B4B2A9; --gray-text: #2C2C2A;
+    --coral-bg: #FAECE7; --coral-border: #F0997B; --coral-text: #712B13;
+    --amber-bg: #FAEEDA; --amber-border: #EF9F27; --amber-text: #633806;
+    --purple-bg: #EEEDFE; --purple-border: #AFA9EC; --purple-text: #3C3489;
+    --blue-bg: #E6F1FB; --blue-border: #85B7EB; --blue-text: #0C447C;
+    --teal-bg: #E1F5EE; --teal-border: #5DCAA5; --teal-text: #085041;
+    --green-bg: #EAF3DE; --green-border: #97C459; --green-text: #27500A;
+    --pink-bg: #FBEAF0; --pink-border: #ED93B1; --pink-text: #72243E;
+    --canvas-bg: #FFFFFF; --subtle-text: #6B7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--canvas-bg); color: #1F2937; padding: 24px; }
+  .diagram { width: 1600px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .legend-row { display: flex; justify-content: space-between; align-items: center; }
+  .role-legend { display: flex; gap: 16px; align-items: center; }
+  .role-legend .role { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; color: var(--subtle-text); }
+  .role .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .workflow-legend { display: flex; gap: 14px; font-size: 11px; font-weight: 500; color: var(--subtle-text); }
+  .workflow-legend span { display: flex; align-items: center; gap: 3px; }
+  .phase-bar { display: flex; height: 40px; }
+  .phase { display: flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 600; color: #fff; clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 0% 100%, 14px 50%); padding: 0 20px; }
+  .phase:first-child { clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 0% 100%); border-radius: 5px 0 0 5px; }
+  .phase:last-child { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 14px 50%); border-radius: 0 5px 5px 0; }
+  .phase.discovery { background: #8B8983; flex: 0 0 11%; } .phase.business { background: #E07A52; flex: 0 0 11%; }
+  .phase.planning { background: #D4890F; flex: 0 0 18%; } .phase.build { background: #6C63C7; flex: 0 0 40%; }
+  .phase.int { background: #3DAF8A; flex: 0 0 7%; font-size: 11px; } .phase.uat { background: #4DC4A1; flex: 0 0 7%; font-size: 11px; } .phase.prod { background: #6AAD3A; flex: 0 0 6%; font-size: 11px; }
+  .autonomy-bar { display: flex; align-items: center; height: 22px; border-radius: 4px; overflow: hidden; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .autonomy-bar .selective { background: #FEF3C7; color: #92400E; display: flex; align-items: center; justify-content: center; height: 100%; border: 1px solid #F59E0B; }
+  .autonomy-bar .full { background: #D1FAE5; color: #065F46; display: flex; align-items: center; justify-content: center; height: 100%; border: 1px solid #10B981; }
+  .timing-row { display: flex; align-items: center; } .timing-item { font-size: 10px; font-weight: 500; color: var(--subtle-text); text-align: center; }
+  .timing-overall { font-size: 12px; font-weight: 600; color: #374151; text-align: center; }
+  .agents-row { display: flex; align-items: stretch; gap: 0; min-height: 148px; }
+  .agent-col { display: flex; align-items: center; }
+  .agent-card { width: 118px; min-height: 140px; border-radius: 8px; border: 1.5px solid; padding: 8px; display: flex; flex-direction: column; flex-shrink: 0; }
+  .agent-card .card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 4px; }
+  .agent-card .agent-icon { font-size: 16px; line-height: 1; } .agent-card .ch-badge { font-size: 8px; font-weight: 700; padding: 1px 5px; border-radius: 3px; background: rgba(0,0,0,0.07); white-space: nowrap; }
+  .agent-card .agent-name { font-size: 10.5px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+  .agent-card .output-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: auto; }
+  .agent-card .tag { font-size: 8px; font-weight: 500; padding: 1px 6px; border-radius: 100px; border: 1px solid; line-height: 1.4; white-space: nowrap; }
+  .agent-card.gray { background: var(--gray-bg); border-color: var(--gray-border); color: var(--gray-text); } .agent-card.gray .tag { border-color: var(--gray-border); }
+  .agent-card.coral { background: var(--coral-bg); border-color: var(--coral-border); color: var(--coral-text); } .agent-card.coral .tag { border-color: var(--coral-border); }
+  .agent-card.amber { background: var(--amber-bg); border-color: var(--amber-border); color: var(--amber-text); } .agent-card.amber .tag { border-color: var(--amber-border); }
+  .agent-card.purple { background: var(--purple-bg); border-color: var(--purple-border); color: var(--purple-text); } .agent-card.purple .tag { border-color: var(--purple-border); }
+  .agent-card.blue { background: var(--blue-bg); border-color: var(--blue-border); color: var(--blue-text); } .agent-card.blue .tag { border-color: var(--blue-border); }
+  .agent-card.teal { background: var(--teal-bg); border-color: var(--teal-border); color: var(--teal-text); } .agent-card.teal .tag { border-color: var(--teal-border); }
+  .agent-card.green { background: var(--green-bg); border-color: var(--green-border); color: var(--green-text); } .agent-card.green .tag { border-color: var(--green-border); }
+  .connector { display: flex; align-items: center; justify-content: center; width: 14px; flex-shrink: 0; color: #9CA3AF; } .connector svg { width: 12px; height: 12px; }
+  .gate { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 42px; flex-shrink: 0; gap: 3px; }
+  .gate .diamond { width: 18px; height: 18px; background: var(--amber-bg); border: 1.5px solid var(--amber-border); transform: rotate(45deg); border-radius: 2px; display: flex; align-items: center; justify-content: center; }
+  .gate .diamond-inner { transform: rotate(-45deg); font-size: 8px; color: var(--amber-text); }
+  .gate .gate-label { font-size: 7.5px; font-weight: 600; color: var(--amber-text); text-align: center; line-height: 1.2; white-space: nowrap; }
+  .crosscut-bar { display: flex; align-items: center; border-radius: 7px; border: 1.5px solid; padding: 8px 14px; gap: 12px; min-height: 42px; }
+  .crosscut-bar .bar-label { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; flex-shrink: 0; min-width: 240px; }
+  .crosscut-bar .bar-label .bar-icon { font-size: 14px; }
+  .crosscut-bar .bar-tags { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; justify-content: flex-end; }
+  .crosscut-bar .bar-tag { font-size: 9px; font-weight: 500; padding: 2px 8px; border-radius: 100px; border: 1px solid; white-space: nowrap; }
+  .crosscut-bar.governance { background: var(--pink-bg); border-color: var(--pink-border); color: var(--pink-text); } .crosscut-bar.governance .bar-tag { border-color: var(--pink-border); }
+  .crosscut-bar.docs { background: var(--green-bg); border-color: var(--green-border); color: var(--green-text); } .crosscut-bar.docs .bar-tag { border-color: var(--green-border); }
+  .crosscut-bar.mcp { background: var(--blue-bg); border-color: var(--blue-border); color: var(--blue-text); } .crosscut-bar.mcp .bar-tag { border-color: var(--blue-border); }
+  .feedback-row { display: flex; justify-content: space-between; padding: 0 16px; }
+  .feedback-item { font-size: 10px; font-weight: 500; color: var(--subtle-text); display: flex; align-items: center; gap: 5px; } .feedback-item .loop-icon { font-size: 13px; }
+  .footer-bar { text-align: center; font-size: 11px; font-weight: 500; color: var(--subtle-text); padding: 10px 0; border-top: 1px solid #E5E7EB; }
+  .version-label { font-size: 10px; font-weight: 600; color: var(--subtle-text); text-transform: uppercase; letter-spacing: 1px; text-align: right; margin-bottom: -6px; }
+  .pattern-label { font-size: 9.5px; font-weight: 700; padding: 2px 9px; border-radius: 100px; white-space: nowrap; }
+  .p-seq { background: #EDE9FE; color: #5B21B6; border: 1.5px solid #8B5CF6; }
+  .p-par { background: #FFF1F2; color: #9F1239; border: 1.5px solid #FB7185; }
+  .p-loop { background: #ECFDF5; color: #065F46; border: 1.5px solid #34D399; }
+  .p-grad { background: #FFF7ED; color: #9A3412; border: 1.5px solid #FB923C; }
+  .pattern-legend { display: flex; gap: 16px; padding: 8px 14px; background: #FAFAFA; border: 1.5px solid #E5E7EB; border-radius: 7px; flex-wrap: wrap; align-items: center; }
+  .pattern-legend strong { font-size: 10px; color: #111827; }
+  .pattern-legend .pl-item { display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 500; color: #374151; }
+  .pattern-legend .pl-item b { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="diagram">
+  <div class="version-label">Version C — Orchestration Patterns · Chapter 14</div>
+  <div class="legend-row">
+    <div class="role-legend">
+      <div class="role"><div class="dot" style="background:#E07A52"></div>SMEs</div>
+      <div class="role"><div class="dot" style="background:#D4890F"></div>Product Owner</div>
+      <div class="role"><div class="dot" style="background:#6C63C7"></div>Tech Lead</div>
+      <div class="role"><div class="dot" style="background:#3DAF8A"></div>Engineer</div>
+      <div class="role"><div class="dot" style="background:#3B82F6"></div>AI Engineer</div>
+    </div>
+    <div class="workflow-legend"><span>► Fully agentic workflow</span><span>▷ Selective agentic support</span></div>
+  </div>
+  <div class="phase-bar">
+    <div class="phase discovery">Discovery &amp; Viability</div><div class="phase business">Business Design</div><div class="phase planning">Define &amp; Planning</div><div class="phase build">Build</div><div class="phase int">INT</div><div class="phase uat">UAT</div><div class="phase prod">Prod</div>
+  </div>
+
+  <!-- Graduated autonomy -->
+  <div class="autonomy-bar">
+    <div class="selective" style="flex:0 0 11%">▷ Selective</div>
+    <div class="selective" style="flex:0 0 11%">▷ Selective</div>
+    <div class="full" style="flex:0 0 18%">► Fully agentic</div>
+    <div class="full" style="flex:0 0 40%">► Fully agentic</div>
+    <div class="full" style="flex:0 0 7%">►</div>
+    <div class="selective" style="flex:0 0 7%">▷</div>
+    <div class="selective" style="flex:0 0 6%">▷</div>
+  </div>
+
+  <div class="timing-overall">~15 hours end-to-end</div>
+  <div class="timing-row">
+    <div class="timing-item" style="flex:0 0 11%">~2h</div><div class="timing-item" style="flex:0 0 11%">~1h</div><div class="timing-item" style="flex:0 0 18%">~3h</div><div class="timing-item" style="flex:0 0 40%">~6h</div><div class="timing-item" style="flex:0 0 7%">~1h</div><div class="timing-item" style="flex:0 0 7%">~1h</div><div class="timing-item" style="flex:0 0 6%">~1h</div>
+  </div>
+
+  <!-- Sequential pipeline annotation -->
+  <div style="display:flex;align-items:center;gap:6px">
+    <span class="pattern-label p-seq">Pattern: Sequential Pipeline</span>
+    <div style="flex:1;height:0;border-top:2px solid #8B5CF6"></div>
+    <span style="font-size:14px;color:#8B5CF6">→</span>
+  </div>
+
+  <div class="agents-row">
+    <div class="agent-col"><div class="agent-card gray"><div class="card-header"><span class="agent-icon">🔍</span><span class="ch-badge">Ch 5</span></div><div class="agent-name">Product discovery agent</div><div class="output-tags"><span class="tag">Opportunity briefs</span><span class="tag">Viability hypotheses</span></div></div></div>
+    <div class="connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    <div class="agent-col"><div class="agent-card coral"><div class="card-header"><span class="agent-icon">📋</span><span class="ch-badge">Ch 6</span></div><div class="agent-name">Project background agent</div><div class="output-tags"><span class="tag">SOP</span><span class="tag">HLSD</span><span class="tag">BDD docs</span></div></div></div>
+    <div class="connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    <div class="agent-col"><div class="agent-card amber"><div class="card-header"><span class="agent-icon">🎯</span><span class="ch-badge">Ch 6</span></div><div class="agent-name">Epic agent</div><div class="output-tags"><span class="tag">Epics</span><span class="tag">DAML / DATF</span></div></div></div>
+    <div class="connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    <div class="agent-col"><div class="agent-card amber"><div class="card-header"><span class="agent-icon">📝</span><span class="ch-badge">Ch 6</span></div><div class="agent-name">Story agent</div><div class="output-tags"><span class="tag">User stories</span><span class="tag">Mock-ups</span></div></div></div>
+    <div class="gate"><div class="diamond"><span class="diamond-inner">✓</span></div><div class="gate-label">PO approval</div></div>
+    <div class="agent-col"><div class="agent-card purple"><div class="card-header"><span class="agent-icon">🏗️</span><span class="ch-badge">Ch 7</span></div><div class="agent-name">Architecture agent</div><div class="output-tags"><span class="tag">Solution architecture</span></div></div></div>
+    <div class="connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    <div class="agent-col"><div class="agent-card blue"><div class="card-header"><span class="agent-icon">💾</span><span class="ch-badge">Ch 8</span></div><div class="agent-name">Data agent</div><div class="output-tags"><span class="tag">Data models</span><span class="tag">Pipelines</span><span class="tag">Migrations</span></div></div></div>
+    <div class="gate"><div class="diamond"><span class="diamond-inner">✓</span></div><div class="gate-label">Tech lead review</div></div>
+    <div class="agent-col"><div class="agent-card purple"><div class="card-header"><span class="agent-icon">📊</span><span class="ch-badge">Ch 7</span></div><div class="agent-name">Planning agent</div><div class="output-tags"><span class="tag">Tech tasks</span><span class="tag">Impl. plan</span></div></div></div>
+    <div class="connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    <!-- Coding & Testing with fix-test loop outline -->
+    <div class="agent-col"><div class="agent-card purple" style="outline:2px dashed #34D399;outline-offset:3px"><div class="card-header"><span class="agent-icon">⚙️</span><span class="ch-badge">Ch 9</span></div><div class="agent-name">Coding agent</div><div class="output-tags"><span class="tag">Pull requests</span><span class="tag">Source code</span><span class="tag">Unit tests</span></div></div></div>
+    <div class="gate"><div class="diamond"><span class="diamond-inner">✓</span></div><div class="gate-label">PR review</div></div>
+    <div class="agent-col"><div class="agent-card teal" style="outline:2px dashed #34D399;outline-offset:3px"><div class="card-header"><span class="agent-icon">🧪</span><span class="ch-badge">Ch 11</span></div><div class="agent-name">Testing agent</div><div class="output-tags"><span class="tag">Test scripts</span><span class="tag">Security scan</span><span class="tag">UAT results</span></div></div></div>
+    <div class="gate"><div class="diamond"><span class="diamond-inner">✓</span></div><div class="gate-label">Go / No-go</div></div>
+    <div class="agent-col"><div class="agent-card green"><div class="card-header"><span class="agent-icon">🚀</span><span class="ch-badge">Ch 12</span></div><div class="agent-name">Release agent</div><div class="output-tags"><span class="tag">Deployment</span><span class="tag">Rollback plan</span></div></div></div>
+  </div>
+
+  <!-- Fix-test loop annotation -->
+  <div style="display:flex;align-items:center">
+    <div style="flex:0 0 73%"></div>
+    <div style="display:flex;align-items:center;gap:5px">
+      <span style="font-size:14px;color:#34D399">↩</span>
+      <span class="pattern-label p-loop">Pattern: Fix-Test Loop</span>
+      <span style="font-size:14px;color:#34D399">↪</span>
+    </div>
+  </div>
+
+  <!-- Parallel supervisor annotation -->
+  <div style="display:flex;align-items:center;gap:6px">
+    <span class="pattern-label p-par">Pattern: Parallel Supervisor</span>
+    <div style="flex:1;height:0;border-top:2px dashed #FB7185"></div>
+  </div>
+
+  <div class="crosscut-bar governance">
+    <div class="bar-label"><span class="bar-icon">🛡️</span>Governance agent (Ch 18)</div>
+    <div class="bar-tags"><span class="bar-tag">STaRT artefacts</span><span class="bar-tag">MCR</span><span class="bar-tag">Release phase</span><span class="bar-tag">Release record</span><span class="bar-tag">Test summary</span><span class="bar-tag">Backout plan</span><span class="bar-tag">SOE</span><span class="bar-tag">Release package</span></div>
+  </div>
+  <div class="crosscut-bar docs">
+    <div class="bar-label"><span class="bar-icon">📖</span>Documentation agent (Ch 17)</div>
+    <div class="bar-tags"><span class="bar-tag">Living ADRs</span><span class="bar-tag">API docs</span><span class="bar-tag">Runbooks</span><span class="bar-tag">Onboarding guides</span><span class="bar-tag">Audit trails</span><span class="bar-tag">Changelog</span></div>
+  </div>
+  <div class="crosscut-bar mcp">
+    <div class="bar-label"><span class="bar-icon">🔌</span>Enterprise context layer — MCP (Ch 16)</div>
+    <div class="bar-tags"><span class="bar-tag">Core banking API</span><span class="bar-tag">Compliance DB</span><span class="bar-tag">Document store</span><span class="bar-tag">Regulatory docs</span><span class="bar-tag">Code standards</span><span class="bar-tag">Architecture guidelines</span><span class="bar-tag">Approved libraries</span><span class="bar-tag">Existing codebase</span></div>
+  </div>
+
+  <!-- Pattern legend -->
+  <div class="pattern-legend">
+    <strong>Orchestration Patterns:</strong>
+    <div class="pl-item"><span class="pattern-label p-seq" style="font-size:8px;padding:1px 7px">1</span><b>Sequential Pipeline</b> — agents pass output to next</div>
+    <div class="pl-item"><span class="pattern-label p-par" style="font-size:8px;padding:1px 7px">2</span><b>Parallel Supervisor</b> — governance observes all</div>
+    <div class="pl-item"><span class="pattern-label p-loop" style="font-size:8px;padding:1px 7px">3</span><b>Fix-Test Loop</b> — coding ↔ testing iterate</div>
+    <div class="pl-item"><span class="pattern-label p-grad" style="font-size:8px;padding:1px 7px">4</span><b>Graduated Autonomy</b> — selective vs fully agentic</div>
+  </div>
+
+  <div class="feedback-row">
+    <div class="feedback-item"><span class="loop-icon">↩</span>Feedback: test failures trigger coding agent fix-test cycle</div>
+    <div class="feedback-item"><span class="loop-icon">↻</span>Iteration: production insights feed back to discovery</div>
+  </div>
+  <div class="footer-bar"><span>🔒</span> All output artifacts are version controlled to allow for continuous updates, reviews, and rollbacks</div>
+</div>
+</body>
+</html>
