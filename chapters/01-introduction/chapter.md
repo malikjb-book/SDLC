@@ -22,21 +22,25 @@ But first, let us understand why this shift is happening now.
 
 ---
 
-## 1.1 Why Now? The Four Forces Reshaping Software Development
+## 1.1 Why Now? – What are the Four Forces Reshaping Software Development?
 
-To appreciate why AI integration into the SDLC matters, we need to understand the structural pressures bearing down on modern software organisations. Think of them as four tectonic plates, all shifting at once.
+To appreciate why AI integration into the SDLC matters, we need to understand the structural pressures bearing down on modern software organisations. **What are these pressures?** Think of them as four tectonic plates, all shifting at once.
 
 ![Figure 1.1: The Four Forces — escalating complexity, velocity demands, talent shortage, and technical debt — converging on modern software teams.](figures/fig-1-1-four-forces.png)
 
 ### Force 1: Escalating Complexity
 
-The software systems that enterprises depend on today are orders of magnitude more complex than those of even a decade ago. A single customer-facing transaction in a modern bank may traverse dozens of microservices, compliance engines, and third-party integrations before completing.
+The software systems that enterprises depend on today are orders of magnitude more complex than those of even a decade ago. **Why does this matter?** A single customer-facing transaction in a modern bank may traverse dozens of microservices, compliance engines, and third-party integrations before completing.
 
-Consider our banking use case. When a corporate client opens an account at CommercialEdge Bank, the request touches KYC verification, sanctions screening, beneficial ownership analysis, multiple compliance databases, a core banking system, and document generation services. That is not one application — it is an ecosystem. And every connection is a potential failure point.
+Consider our banking use case. When a corporate client opens an account at CommercialEdge Bank, the request touches KYC verification, sanctions screening, beneficial ownership analysis, multiple compliance databases, a core banking system, and document generation services.
+
+That is a massive ecosystem, and every connection is a potential failure point.
 
 ### Force 2: Velocity Demands
 
-Here is the paradox: as systems get more complex, businesses expect them to ship *faster*. Digital-first competitors, regulatory changes requiring rapid system updates, and customer expectations shaped by consumer technology all compress delivery timelines. Engineering leaders are asked to ship more features, faster, while simultaneously improving security posture and reducing defect rates.
+Here is the paradox: as systems get more complex, businesses expect them to ship *faster*. **What creates this pressure?** Digital-first competitors, regulatory changes requiring rapid system updates, and customer expectations shaped by consumer technology all compress delivery timelines.
+
+So why are leaders asked to ship faster **and** safer? Because the market gives them no choice. Engineering leaders must ship more features, faster, while simultaneously improving security posture and reducing defect rates.
 
 ### Force 3: The Talent Shortage
 
@@ -46,15 +50,17 @@ The shortage is particularly acute in the specialisms that matter most: AI/ML en
 
 ### Force 4: The Technical Debt Crisis
 
+Think of technical debt as rust on a bridge — the more it accumulates, the less weight it can bear. Eventually, the whole structure becomes unsafe.
+
 Technical debt has reached a scale that now threatens organisational agility at a systemic level. CAST's 2025 analysis of more than 10 billion lines of code found that global technical debt has reached **61 billion workdays** in estimated repair time. Nearly **45 percent** of the world's code was classified as fragile.
 
-What does that look like in practice? According to Pegasystems research, the average global enterprise wastes more than **$370 million annually** due to its inability to efficiently modernise legacy systems.
+**Why does technical debt matter?** According to Pegasystems research, the average global enterprise wastes more than **$370 million annually** due to its inability to efficiently modernise legacy systems.
 
 ![Figure 1.2: The Scale of Technical Debt — 61 billion workdays of global repair time, $370M+ wasted per enterprise, and 45% of code classified as fragile.](figures/fig-1-2-technical-debt.png)
 
 ### Why These Forces Matter Together
 
-Any one of these forces would be challenging. Together, they create an environment where traditional approaches to software delivery are reaching their limits. This is the context into which AI enters the SDLC — not as a novelty, but as a potential structural solution.
+Any one of these forces would be challenging. **What happens when they combine?** Together, they create an environment where traditional approaches to software delivery are reaching their limits. This is the context into which AI enters the SDLC — not as a novelty, but as a potential structural solution.
 
 > **By the Numbers: The Pressure on Software Teams**
 >
@@ -68,13 +74,13 @@ Any one of these forces would be challenging. Together, they create an environme
 
 ---
 
-## 1.2 What Is Actually Happening with AI in Software Engineering?
+## 1.2 What Is Actually Happening with AI in Software Engineering? – How have AI tools evolved?
 
-So the pressure is real. But what about the AI tools themselves? Are they ready? Let us look at the evidence.
+Now that we've set the stage, let's look at how AI tools have evolved. The pressure is real — but what about the AI tools themselves? Are they ready? Let us look at the evidence.
 
 ### From Autocomplete to Autonomous Agents
 
-The evolution of AI coding tools can be understood as a progression through three distinct generations, as illustrated in Figure 1.3.
+The evolution of AI coding tools can be understood as a progression through three distinct generations, **what does each generation bring?** as illustrated in Figure 1.3.
 
 ![Figure 1.3: Three Generations of AI Coding Tools — from inline autocomplete (2021) to chat-based assistance (2023) to autonomous agents that plan, execute, and iterate (2025).](figures/fig-1-3-three-generations.png)
 
@@ -95,7 +101,7 @@ The adoption numbers tell a clear story. By early 2026:
 - **41%** of production code is AI-generated or AI-assisted
 - **70%** of developers use between 2–4 AI tools simultaneously
 
-Claude Code, despite launching only eight months prior, became the most widely used AI coding tool by early 2026 — rising from 4 percent of developers in May 2025 to 63 percent by February 2026.
+Claude Code, despite launching only eight months prior, became the most widely used AI coding tool by early 2026 — rising from 4 percent of developers in May 2025 to 63 percent by February 2026. **What does this rapid rise imply?** It shows that developers quickly gravitate toward tools that demonstrably boost productivity.
 
 ![Figure 1.4: AI Adoption in Software Engineering (2026) — 92% of developers using AI tools, 51% daily, 41% of production code AI-generated.](figures/fig-1-4-ai-adoption.png)
 
@@ -103,19 +109,23 @@ Claude Code, despite launching only eight months prior, became the most widely u
 
 Here is where it gets interesting — and where the thesis of this book begins.
 
-At the task level, controlled experiments consistently demonstrate **30 to 55 percent speed improvements**. Developers write code faster with AI. That part is not in dispute.
+**What's the hidden bottleneck?** At the task level, controlled experiments consistently demonstrate **30 to 55 percent speed improvements**. Developers write code faster with AI. That part is not in dispute.
 
-But a landmark randomised controlled trial by METR found something surprising: experienced open-source developers actually took **19 percent longer** on tasks when using early-2025 AI tools — despite self-reporting a 20 percent speedup. Faros AI's analysis of over 10,000 developers confirmed that many organisations see **no measurable improvement in delivery velocity** despite faster individual coding.
+But a landmark randomised controlled trial by METR found something surprising: experienced open-source developers actually took **19 percent longer** on tasks when using early-2025 AI tools — despite self-reporting a 20 percent speedup.
 
-Why? Because coding speed is only one bottleneck. Requirements that are vague. Architectures that are undocumented. Tests that are incomplete. Compliance evidence that is assembled retrospectively. AI makes coding faster — but if the rest of the lifecycle is still manual, the bottleneck simply moves.
+Faros AI's analysis of over 10,000 developers confirmed that many organisations see **no measurable improvement in delivery velocity** despite faster individual coding.
+
+**Why?** Because coding speed is only one bottleneck. Requirements that are vague. Architectures that are undocumented. Tests that are incomplete. Compliance evidence that is assembled retrospectively.
+
+Speed alone isn't enough. AI makes coding faster — but if the rest of the lifecycle is still manual, the bottleneck simply moves.
 
 > **The Core Insight**
 >
-> AI does not automatically improve the SDLC. It improves the SDLC when integrated thoughtfully across *every* phase — from requirements through deployment and operations. This is what the rest of this book is about.
+> AI does not automatically improve the SDLC. **When does it help?** It improves the SDLC when integrated thoughtfully across *every* phase — from requirements through deployment and operations. This is what the rest of this book is about.
 
 ---
 
-## 1.3 The Business Case: Why AI Across the Full SDLC
+## 1.3 The Business Case: Why AI Across the Full SDLC – What’s the ROI?
 
 If faster coding alone does not solve the problem, why bother? Because the gains from AI compound when you apply it across the *entire* lifecycle. Let us look at the four pillars of the business case.
 
@@ -123,27 +133,29 @@ If faster coding alone does not solve the problem, why bother? Because the gains
 
 ### Pillar 1: Accelerated Delivery
 
-AI tools reduce the time required for many individual development activities. Developers report saving 30 to 60 percent of their time on coding, test generation, and documentation tasks. Teams with high AI adoption touch 9 percent more tasks and handle **47 percent more pull requests per day**. Large enterprises have reported 28 percent increases in code shipment volume to production.
+AI tools reduce the time required for many individual development activities. **How much time?** Developers report saving 30 to 60 percent of their time on coding, test generation, and documentation tasks. Teams with high AI adoption touch 9 percent more tasks and handle **47 percent more pull requests per day**. Large enterprises have reported 28 percent increases in code shipment volume to production.
 
 ### Pillar 2: Enhanced Quality
 
 AI-powered code review tools can identify patterns of technical debt accumulation, flag security vulnerabilities, and suggest architectural improvements. AI-driven test generation can achieve higher coverage more rapidly.
 
-But here is the caveat: AI-generated code itself introduces quality risks if not properly governed. Roughly **62 percent** of developers report that AI tools increase technical debt, and code duplication is up approximately four-fold with AI-assisted coding. Quality gains require the testing, review, and governance practices that this book covers in Chapters 10, 11, and 18.
+**What's the trade-off?** AI-generated code itself introduces quality risks if not properly governed. Roughly **62 percent** of developers report that AI tools increase technical debt, and code duplication is up approximately four-fold with AI-assisted coding.
+
+Quality gains require the testing, review, and governance practices that this book covers in Chapters 10, 11, and 18.
 
 ### Pillar 3: Cost Optimisation
 
-The AI in software development market was valued at approximately $933 million in 2025 and is projected to reach $15.7 billion by 2033. Microsoft's market studies show AI investments returning an average of **3.5×**, with some organisations reporting returns as high as 8×.
+The AI in software development market was valued at approximately $933 million in 2025 and is projected to reach $15.7 billion by 2033. **What does this mean for investors?** Microsoft's market studies show AI investments returning an average of **3.5×**, with some organisations reporting returns as high as 8×.
 
 ### Pillar 4: Developer Experience
 
-This one often gets overlooked, but it may be the most strategically important. According to McKinsey research, developers who use AI tools are **twice as likely** to report feeling happier, more fulfilled, and regularly entering a flow state. Around 57 percent say AI tools make their job more enjoyable.
+This one often gets overlooked, but it may be the most strategically important. **Why does happiness matter?** According to McKinsey research, developers who use AI tools are **twice as likely** to report feeling happier, more fulfilled, and regularly entering a flow state. Around 57 percent say AI tools make their job more enjoyable.
 
 In a labour market where you cannot hire enough engineers, making the ones you have happier and more productive is a significant competitive advantage.
 
 ---
 
-## 1.4 Meet CommercialEdge Bank: Our Running Use Case
+## 1.4 Meet CommercialEdge Bank: Our Running Use Case – Why this example?
 
 Throughout this book, we ground everything in a single, end-to-end use case. Let us introduce it.
 
@@ -155,7 +167,7 @@ Why this use case? Three reasons:
 2. **It exercises every SDLC phase.** Requirements, design, data engineering, coding, testing, deployment, operations, documentation, and governance — all substantively.
 3. **The domain is data-rich and process-heavy.** Making it an excellent vehicle for demonstrating AI's value across the entire lifecycle.
 
-The platform covers the full onboarding journey across eight stages:
+The platform covers the full onboarding journey across eight stages. **What are those stages?**
 
 ![Figure 1.6: The CommercialEdge Bank Onboarding Pipeline — eight stages from prospect capture (Day 0) to handover and activation (Day 5).](figures/fig-1-6-onboarding-pipeline.png)
 
@@ -187,9 +199,9 @@ The next section answers both questions.
 
 ---
 
-## 1.5 Two Paths, One Platform: Traditional vs. AI-Enabled SDLC
+## 1.5 Two Paths, One Platform — Which path will you take?
 
-This is the heart of the chapter. We are going to walk through the CommercialEdge Bank onboarding platform *twice*: once as it would be delivered through a traditional SDLC, and once through an AI-enabled agentic SDLC. Same requirements. Same regulations. Same business objectives. Different approach — and radically different outcomes.
+This is the heart of the chapter. **Which path wins?** We are going to walk through the CommercialEdge Bank onboarding platform *twice*: once as it would be delivered through a traditional SDLC, and once through an AI-enabled agentic SDLC. Same requirements. Same regulations. Same business objectives. Different approach — and radically different outcomes.
 
 ### The Headline Numbers
 
@@ -215,7 +227,9 @@ Let us walk through each phase to see *how* these differences arise.
 
 ### Phase 1: Discovery and Viability
 
-*Figure 1.8: Discovery Phase Comparison — to be generated (purple-white enterprise style).*
+Let's see how the two paths diverge in the discovery stage.
+
+> 📊 **Figure 1.8: Discovery Phase Comparison** — Traditional vs. AI-Enabled discovery workflows *(image pending generation)*
 
 **The Traditional Way.** The product manager schedules eight workshops over six weeks with compliance officers, relationship managers, operations leads, and IT. A business analyst manually synthesises findings into a 40-page opportunity assessment. Two review cycles follow. Three months in, a competitor launches same-day onboarding — the viability assumptions must be revisited, adding two more weeks.
 
@@ -249,7 +263,9 @@ Let us walk through each phase to see *how* these differences arise.
 
 ### Phase 5: Build (Coding)
 
-*Figure 1.9: Coding Phase Comparison — to be generated (purple-white enterprise style).*
+Now let's look at where most people assume AI adds value — the coding phase itself.
+
+> 📊 **Figure 1.9: Coding Phase Comparison** — Traditional vs. AI-Enabled coding workflows *(image pending generation)*
 
 **The Traditional Way.** Eight developers work for 16 weeks. Pull request reviews average two-day turnaround. Context is lost when developers switch features.
 
@@ -331,7 +347,7 @@ Every one of these risks is addressed in the relevant chapter: code quality in C
 
 This book mirrors the Software Development Lifecycle itself — progressing from foundational concepts through every SDLC phase, then addressing cross-cutting concerns, and concluding with legacy modernisation and real-world case studies. It comprises **22 chapters organised in six parts**:
 
-*Figure 1.10: Book Structure — to be generated (purple-white enterprise style).*
+> 📊 **Figure 1.10: Book Structure** — six parts from foundations through every SDLC phase to modernisation and case studies *(image pending generation)*
 
 - **Part I — Foundations (Chapters 0–4):** Context, history, and the AI tool landscape
 - **Part II — Product Lifecycle (Chapter 5):** PDLC — Discovery → Viability → Spec
@@ -342,9 +358,9 @@ This book mirrors the Software Development Lifecycle itself — progressing from
 
 ### The Agentic SDLC Architecture
 
-The diagram below illustrates the agentic SDLC architecture that this book prepares you to design, build, and govern. Think of it as the target state: a fully instrumented development lifecycle in which specialised AI agents own each phase, draw context from a shared enterprise infrastructure layer, operate under continuous governance, and are gated by human approval at critical decision points.
+The diagram below illustrates the agentic SDLC architecture that this book prepares you to design, build, and govern. **Why this matters:** it is a fully instrumented development lifecycle where specialised AI agents own each phase, draw context from a shared enterprise infrastructure layer, operate under continuous governance, and are gated by human approval at critical decision points.
 
-Each subsequent chapter deep-dives into one or more agents in this architecture.
+Think of the SDLC as a factory assembly line — AI agents are the robots on that line, each one specialised for a specific station. Each subsequent chapter deep-dives into one or more agents in this architecture.
 
 > 📊 **Figure 1.11: The Agentic SDLC Architecture — the book's target state.**
 >
