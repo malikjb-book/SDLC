@@ -20,6 +20,10 @@ But first, let us understand why this shift is happening now.
 > 4. What does the *same project* look like under a traditional SDLC vs. an AI-enabled one?
 > 5. How does this book guide you through building an AI-augmented SDLC, chapter by chapter?
 
+> 👤 **Who Should Read This Book**
+>
+> This book is written for **engineering leaders, architects, and senior developers** who are responsible for adopting AI tools across their software development lifecycle. Product managers, CTOs, and VP Engineering will find the business case and governance chapters particularly valuable. Junior developers will benefit from the hands-on coding and testing chapters. If you build software for a living — or manage people who do — this book is for you.
+
 ---
 
 ## 1.1 Why Now? – What are the Four Forces Reshaping Software Development?
@@ -76,7 +80,7 @@ Any one of these forces would be challenging. **What happens when they combine?*
 
 ## 1.2 What Is Actually Happening with AI in Software Engineering? – How have AI tools evolved?
 
-Now that we've set the stage, let's look at how AI tools have evolved. The pressure is real — but what about the AI tools themselves? Are they ready? Let us look at the evidence.
+The pressure is real — but are the AI tools ready? Let us look at the evidence.
 
 ### From Autocomplete to Autonomous Agents
 
@@ -101,7 +105,7 @@ The adoption numbers tell a clear story. By early 2026:
 - **41%** of production code is AI-generated or AI-assisted
 - **70%** of developers use between 2–4 AI tools simultaneously
 
-Claude Code, despite launching only eight months prior, became the most widely used AI coding tool by early 2026 — rising from 4 percent of developers in May 2025 to 63 percent by February 2026. **What does this rapid rise imply?** It shows that developers quickly gravitate toward tools that demonstrably boost productivity.
+The most popular AI coding tools of early 2026 rose from near-zero to majority adoption in under a year — a pace of uptake unprecedented in developer tooling history.
 
 ![Figure 1.4: AI Adoption in Software Engineering (2026) — 92% of developers using AI tools, 51% daily, 41% of production code AI-generated.](figures/fig-1-4-ai-adoption.png)
 
@@ -125,7 +129,7 @@ Speed alone isn't enough. AI makes coding faster — but if the rest of the life
 
 ---
 
-## 1.3 The Business Case: Why AI Across the Full SDLC – What’s the ROI?
+## 1.3 The Business Case: Why AI Across the Full SDLC – What's the ROI?
 
 If faster coding alone does not solve the problem, why bother? Because the gains from AI compound when you apply it across the *entire* lifecycle. Let us look at the four pillars of the business case.
 
@@ -133,7 +137,7 @@ If faster coding alone does not solve the problem, why bother? Because the gains
 
 ### Pillar 1: Accelerated Delivery
 
-AI tools reduce the time required for many individual development activities. **How much time?** Developers report saving 30 to 60 percent of their time on coding, test generation, and documentation tasks. Teams with high AI adoption touch 9 percent more tasks and handle **47 percent more pull requests per day**. Large enterprises have reported 28 percent increases in code shipment volume to production.
+The speed gains documented in Section 1.2 translate into real delivery improvements when applied broadly. Teams with high AI adoption touch 9 percent more tasks and handle **47 percent more pull requests per day**. Large enterprises have reported 28 percent increases in code shipment volume to production.
 
 ### Pillar 2: Enhanced Quality
 
@@ -145,7 +149,7 @@ Quality gains require the testing, review, and governance practices that this bo
 
 ### Pillar 3: Cost Optimisation
 
-The AI in software development market was valued at approximately $933 million in 2025 and is projected to reach $15.7 billion by 2033. **What does this mean for investors?** Microsoft's market studies show AI investments returning an average of **3.5×**, with some organisations reporting returns as high as 8×.
+For a project the size of CommercialEdge Bank, AI-enabled SDLC reduces the estimated cost from **$4–6M to $1.5–2.5M** — a **60 percent reduction** driven by smaller teams, shorter timelines, and reduced rework. Microsoft's market studies confirm that AI investments in software development return an average of **3.5×**, with some organisations reporting returns as high as 8×.
 
 ### Pillar 4: Developer Experience
 
@@ -159,7 +163,7 @@ In a labour market where you cannot hire enough engineers, making the ones you h
 
 Throughout this book, we ground everything in a single, end-to-end use case. Let us introduce it.
 
-**CommercialEdge Bank** is a mid-sized commercial bank that is replacing its manual, paper-intensive corporate onboarding process — which currently takes an average of four weeks — with an end-to-end digital platform targeting a cycle time of three to five days.
+**CommercialEdge Bank** is a mid-sized commercial bank replacing its manual, paper-intensive corporate onboarding process with an end-to-end digital platform.
 
 Why this use case? Three reasons:
 
@@ -193,35 +197,17 @@ The platform covers the full onboarding journey across eight stages. **What are 
 > | Scope | 8 stages, 6 compliance checks, end-to-end |
 > | Accounts | Corporate Current, Trade Finance, FCY, Cash Management, Credit Facility |
 
-The question that naturally follows is: *what does it actually look like to build this system?* And how different is the experience when AI is embedded across every phase?
-
-The next section answers both questions.
-
 ---
 
 ## 1.5 Two Paths, One Platform — Which path will you take?
 
-This is the heart of the chapter. **Which path wins?** We are going to walk through the CommercialEdge Bank onboarding platform *twice*: once as it would be delivered through a traditional SDLC, and once through an AI-enabled agentic SDLC. Same requirements. Same regulations. Same business objectives. Different approach — and radically different outcomes.
+This is the heart of the chapter. We walk the CommercialEdge Bank onboarding platform through both lenses: a traditional SDLC and an AI-enabled agentic SDLC. Same requirements. Same regulations. Different approach — and radically different outcomes.
 
-### The Headline Numbers
-
-Before we dive into the phase-by-phase comparison, here is the summary. Take a moment to absorb these numbers:
-
-![Figure 1.7: Traditional vs. AI-Enabled SDLC — side-by-side comparison showing the difference in timeline, team size, and cost.](figures/fig-1-7-traditional-vs-ai.png)
-
-| Dimension | Traditional SDLC | AI-Enabled SDLC |
-|-----------|------------------|-----------------|
-| **End-to-end timeline** | 9–12 months | 3–4 months |
-| **Discovery & requirements** | 8–10 weeks manual | 2–3 weeks AI-synthesised |
-| **Design & architecture** | 4–6 weeks | 1–2 weeks |
-| **Data engineering** | 6–8 weeks | 2–3 weeks |
-| **Build (coding)** | 12–16 weeks | 4–6 weeks |
-| **Testing & QA** | 6–8 weeks | 2–3 weeks |
-| **Deployment & release** | 2–4 weeks | 3–5 days |
-| **Documentation** | Perpetually behind | Living, auto-generated |
-| **Team size** | 25–35 people | 12–18 people |
-| **Estimated project cost** | $4–6M | $1.5–2.5M (60% reduction) |
-| **Compliance readiness** | Weeks of audit preparation | Continuous from day one |
+> **The Bottom Line**
+>
+> - **Timeline:** 9–12 months → 3–4 months
+> - **Team size:** 25–35 people → 12–18 people
+> - **Estimated cost:** $4–6M → $1.5–2.5M (60% reduction)
 
 Let us walk through each phase to see *how* these differences arise.
 
@@ -259,8 +245,6 @@ Let's see how the two paths diverge in the discovery stage.
 
 **The AI-Enabled Way.** The Data Agent generates the entity-relationship model from requirements, verified against the existing core banking schema. Self-healing pipelines auto-adapt when provider formats change. Synthetic data generation produces 500 realistic corporate client profiles in hours with **zero compliance exposure**.
 
-*What you will learn: Chapter 8 covers AI-assisted data modelling, self-healing pipelines, and synthetic data generation.*
-
 ### Phase 5: Build (Coding)
 
 Now let's look at where most people assume AI adds value — the coding phase itself.
@@ -271,43 +255,9 @@ Now let's look at where most people assume AI adds value — the coding phase it
 
 **The AI-Enabled Way.** The Coding Agent implements tasks from the sequenced backlog, operating with full codebase context through the Enterprise Context Layer (MCP). PR turnaround drops to hours as AI-assisted code review catches common issues immediately. Same scope, **five developers in six weeks**.
 
-*What you will learn: Chapter 9 covers agentic coding; Chapter 10 covers AI-augmented review.*
+### Remaining Phases at a Glance
 
-### Phase 6: Testing and Quality Assurance
-
-**The Traditional Way.** Four weeks writing test cases manually, achieving 60 percent code coverage. Security testing bolted on at the end, revealing vulnerabilities that require emergency fixes.
-
-**The AI-Enabled Way.** The Testing Agent generates test suites from acceptance criteria, achieving **85 percent coverage** from the first pass. Mutation testing validates that the tests actually catch bugs. Security scanning runs continuously from the first commit.
-
-*What you will learn: Chapter 11 covers AI-generated tests, mutation testing, and continuous security scanning.*
-
-### Phase 7: CI/CD and Deployment
-
-**The Traditional Way.** Two-week deployment windows. A 47-item manual checklist. Untested rollbacks.
-
-**The AI-Enabled Way.** Intelligent CI/CD pipelines run predictive builds that flag integration issues before staging. Canary deployments roll out safely. **Release in hours, not weeks.**
-
-*What you will learn: Chapters 12 and 13 cover intelligent pipelines, predictive builds, and auto-rollback.*
-
-### Phase 8: AI Agents in the Product Itself
-
-**The Traditional Way.** All compliance screening is manual — 2.3 human touchpoints per check.
-
-**The AI-Enabled Way.** Three production AI agents operate within the platform: a KYC Document Processing Agent, a Compliance Screening Agent, and an Onboarding Assistant Agent. Compliance processing drops from **weeks to hours**.
-
-*What you will learn: Chapter 14 covers orchestration patterns, human-in-the-loop, and reliability engineering.*
-
-### Phase 9: Governance, Documentation, and Infrastructure
-
-**The Traditional Way.** Documentation written after development, if at all. Audits mean weeks of panic. Knowledge remains siloed.
-
-**The AI-Enabled Way.** The Documentation Agent produces living ADRs, auto-generated API docs, and compliance trails from day one. The Governance Agent monitors the pipeline in parallel. The Enterprise Context Layer (MCP) provides unified cross-agent access.
-
-*What you will learn: Chapters 16–21 cover MCP infrastructure, living docs, governance, economics, and legacy modernisation.*
-
-### The Full Comparison
-
-The following table consolidates the complete phase-by-phase contrast:
+The pattern continues through testing, deployment, production AI, and governance. The following table captures the full contrast:
 
 | SDLC Phase | Traditional | AI-Enabled | Chapters |
 |------------|-------------|------------|----------|
@@ -334,8 +284,9 @@ We would be doing you a disservice if we presented the AI-enabled path as risk-f
 - **Over-trust** in AI recommendations can bypass critical human judgment
 - **Hallucinated requirements or architecture decisions** can propagate through the pipeline if spec validation is inadequate
 - **Token costs** for production AI agents can exceed projections if not actively managed
+- **Organisational resistance** — developers who distrust AI output, managers who question ROI, and compliance teams unfamiliar with AI-generated artifacts can slow adoption
 
-Every one of these risks is addressed in the relevant chapter: code quality in Chapters 9–10, testing in Chapter 11, governance in Chapter 18, and economics in Chapter 19.
+Every one of these risks is addressed in the relevant chapter: code quality in Chapters 9–10, testing in Chapter 11, governance in Chapter 18, economics in Chapter 19, and adoption in Chapter 22.
 
 > **The Key Takeaway**
 >
@@ -356,6 +307,10 @@ This book mirrors the Software Development Lifecycle itself — progressing from
 - **Part V — Cross-Cutting (Chapters 15–20):** DX, Infrastructure, Docs, Governance, Economics, ROI
 - **Part VI — Modernisation & Capstone (Chapters 21–22):** Legacy + Case Studies
 
+> 💡 **How to Read This Book**
+>
+> If you are new to AI in the SDLC, read linearly — each chapter builds on the previous one. If you already use AI for coding and want to expand, jump to your weakest SDLC phase using the agent-to-chapter mapping below. If you are a CTO building a business case, start with Chapters 1, 19, and 20.
+
 ### The Agentic SDLC Architecture
 
 The diagram below illustrates the agentic SDLC architecture that this book prepares you to design, build, and govern. **Why this matters:** it is a fully instrumented development lifecycle where specialised AI agents own each phase, draw context from a shared enterprise infrastructure layer, operate under continuous governance, and are gated by human approval at critical decision points.
@@ -371,7 +326,7 @@ Think of the SDLC as a factory assembly line — AI agents are the robots on tha
 The following table maps each agent in the diagram to its corresponding book chapter. Use this as your navigation guide:
 
 | Agent in Diagram | Book Chapter(s) | What You Will Learn |
-|-----------------|-----------------|--------------------|
+|-----------------|-----------------|---------------------|
 | Product Discovery Agent | Ch 5: AI-Powered PDLC | How AI compresses Discovery and Viability, spec-driven development with Kiro |
 | Project Background Agent | Ch 6: AI-Assisted Requirements & Planning | AI-generated project documentation, SOPs, and background synthesis |
 | Epic Agent + Story Agent | Ch 6: AI-Assisted Requirements & Planning | AI-generated epics, user stories, acceptance criteria in EARS notation |
@@ -389,35 +344,15 @@ The following table maps each agent in the diagram to its corresponding book cha
 
 This architecture is not theoretical. Every component will be implemented for the CommercialEdge Bank onboarding platform across the chapters that follow.
 
-### Chapter-by-Chapter Roadmap
+---
 
-| Ch | Title | SDLC Phase | Key Topics |
-|----|-------|------------|------------|
-| 2 | SDLC Fundamentals | Foundations | Waterfall, Agile, Lean, DevOps — phases and artifacts |
-| 3 | Modern SDLC Models | Foundations | Continuous delivery, platform engineering, DevSecOps |
-| 4 | AI Landscape for Software Engineering | Foundations | LLMs, foundation models, copilots, agents, tool taxonomy |
-| 5 | AI-Powered PDLC | PDLC Bridge | Discovery, viability, Kiro, spec-driven development |
-| 6 | AI-Assisted Requirements & Planning | Requirements | Story generation, spec analysis, estimation |
-| 7 | AI-Powered Design & Architecture | Design | Architecture recommendations, design doc generation |
-| 8 | Data Engineering & Platform Architecture | Data | Data modelling, pipelines, document processing, synthetic data |
-| 9 | Coding Agents & AI Pair Programming | Build | Copilot, Cursor, Claude Code, Windsurf, agentic coding |
-| 10 | AI-Augmented Code Review & Quality | Build | Automated review, refactoring, tech debt detection |
-| 11 | AI-Driven Testing & QA | Verify | Test generation, mutation testing, visual regression |
-| 12 | Intelligent CI/CD & DevOps | Release | Pipeline optimization, predictive builds, IaC |
-| 13 | AI for Deployment, Monitoring & Ops | Operate | AIOps, anomaly detection, self-healing systems |
-| 14 | AI Agents in Production | Operate | Orchestration, human-in-the-loop, guardrails, reliability |
-| 15 | Developer Experience & Tooling | Cross-cutting | IDE integration, CLI tools, productivity measurement |
-| 16 | AI Agent Infrastructure (MCP) | Cross-cutting | Tool use, MCP servers, enterprise integration |
-| 17 | Documentation & Knowledge Management | Cross-cutting | Living ADRs, API docs, audit trails, onboarding |
-| 18 | Governance, Security & Responsible AI | Cross-cutting | IP/licensing, code provenance, AI safety in SDLC |
-| 19 | AI Economics & Vendor Strategy | Cross-cutting | Build vs. buy, token costs, TCO, vendor lock-in |
-| 20 | Measuring SDLC Maturity & ROI | Cross-cutting | DORA metrics, maturity models, cost-benefit analysis |
-| 21 | AI and Legacy Modernisation | Modernisation | Code comprehension, refactoring, migration, debt remediation |
-| 22 | Case Studies & Adoption Playbook | Capstone | Real-world implementations, adoption roadmap |
+## What to Do on Monday Morning
 
-In each subsequent chapter, we return to the CommercialEdge Bank use case to demonstrate how AI tools and practices apply to the relevant SDLC phase. Chapter 5 produces the spec artifacts. Chapter 6 generates requirements. Chapter 7 designs the architecture. Chapter 8 builds the data platform. Chapter 9 implements the code. And so on through deployment, governance, and beyond.
+You do not need to finish this book before taking action. Here are three things you can do this week:
 
-This continuity gives you a coherent, cumulative learning experience that mirrors how AI integration works on a real project.
+1. **Assess your team's AI tool usage.** Survey your developers: Which AI tools are they using? For which tasks? You may be surprised by the gap between official policy and actual practice.
+2. **Identify your biggest SDLC bottleneck.** Is it requirements gathering? Testing? Compliance evidence? The phase with the most manual effort and longest delays is where AI will deliver the fastest ROI.
+3. **Pick one non-coding phase to pilot AI.** Most teams start with coding — that is the easy win. The compound gains this book describes come from expanding beyond coding. Choose one upstream or downstream phase and experiment.
 
 ---
 
@@ -425,13 +360,13 @@ This continuity gives you a coherent, cumulative learning experience that mirror
 
 Let us recap the big ideas from this chapter:
 
-- **The SDLC is under structural pressure.** A projected global shortfall of four million developers, 61 billion workdays of accumulated technical debt, and accelerating complexity create an environment where traditional approaches alone cannot scale.
+- **The SDLC is under structural pressure** from escalating complexity, velocity demands, a global talent shortage, and accumulated technical debt. Traditional approaches alone cannot scale.
 
 - **AI has crossed the adoption threshold.** Over 90 percent of developers now use AI tools in their workflow, and autonomous coding agents represent a qualitative leap beyond earlier autocomplete and chat-based assistants.
 
 - **Task-level gains do not automatically translate to organisational productivity.** Realising the full value of AI requires integration across the entire SDLC — not just faster coding.
 
-- **The same project, two radically different outcomes.** The CommercialEdge Bank onboarding platform demonstrates that AI-enabled SDLC can reduce timelines from 9–12 months to 3–4 months, team sizes from 25–35 to 12–18, and costs by roughly 60 percent — while improving quality and compliance readiness.
+- **The same project, two radically different outcomes.** The CommercialEdge Bank onboarding platform demonstrates that AI-enabled SDLC can compress timelines by 60–70 percent and costs by roughly 60 percent — while improving quality and compliance readiness.
 
 - **The business case is compelling but conditional.** AI-enabled gains compound when pursued across every phase. In isolation, benefits may be marginal or offset by new risks such as AI-induced technical debt and over-trust.
 
