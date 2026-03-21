@@ -7,6 +7,8 @@
 
 ## Overview
 
+The Governance Agent is unique in the agentic SDLC architecture (Figure 1.1): it is the only agent that operates across every phase simultaneously. While the sequential agents each own a single lifecycle stage, the Governance Agent monitors the entire pipeline in parallel, consuming artifacts as they are produced and validating them against compliance requirements, release standards, and audit obligations. This cross-cutting role makes it both the most important and the most architecturally complex agent in the system.
+
 The rapid adoption of AI coding tools in enterprise software development has created a governance vacuum. Organizations are generating millions of lines of AI-assisted code while simultaneously lacking frameworks to manage the intellectual property, security, compliance, and ethical implications. This chapter provides enterprise-grade frameworks for governing AI in the SDLC — from IP and licensing to security scanning, from regulatory compliance to data privacy — ensuring that the speed AI provides doesn't come at the cost of the trust your software requires.
 
 ## Learning Objectives

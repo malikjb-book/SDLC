@@ -319,10 +319,11 @@ re-specify them in every prompt.
 
 Fourth, Kiro integrates the Model Context Protocol (MCP), which connects
 the agent to external enterprise resources: documentation, databases,
-APIs, incident tracking systems, and more. For CommercialEdge Bank, this
-would mean connecting Kiro to the bank’s regulatory compliance database,
+APIs, incident tracking systems, and more. For CommercialEdge Bank, tThis would mean connecting Kiro to the bank’s regulatory compliance database,
 its core banking API specifications, and its internal architecture
 decision records.
+
+The spec-driven workflow — from natural-language prompt through requirements, design, and tasks — maps directly to the first four agents in the agentic SDLC architecture that we will explore in full in Chapter 1's roadmap (Figure 1.1) and revisit in Chapters 14 and 16.
 
 **Complementary Frameworks**
 

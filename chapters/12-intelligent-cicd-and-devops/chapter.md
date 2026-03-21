@@ -13,6 +13,8 @@ AI is transforming CI/CD from a deterministic, rule-based automation layer into 
 
 But the impact extends beyond speed. AI enables *predictive* pipelines that anticipate failures before they happen, *self-healing* infrastructure that fixes problems without human intervention, and *release intelligence* that quantifies the risk of every deployment. This chapter covers the full stack of intelligent DevOps — from pipeline optimization to AIOps, Infrastructure as Code, and autonomous operations.
 
+*(See Chapter 14: Agentic Enterprise Architecture for how this agent class orchestrates with others)*
+
 ## Learning Objectives
 
 By the end of this chapter, you will be able to:

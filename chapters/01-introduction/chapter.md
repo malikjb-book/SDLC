@@ -174,11 +174,32 @@ In a labour market where talent retention is a critical challenge, these experie
 
 This book is structured to mirror the Software Development Lifecycle itself, progressing from foundational concepts through requirements, design, coding, testing, deployment, operations, and governance. Each chapter maps to one or more SDLC phases and demonstrates how AI tools and practices can be integrated at that stage.
 
-The diagram below — the **Agentic SDLC Architecture** — serves as the book's central visual thesis. It shows how specialised AI agents own each SDLC phase, connected by an enterprise context layer (MCP), governed by cross-cutting agents, and gated by human approval points. We return to this diagram in Chapter 14 (orchestration patterns) and Chapter 16 (infrastructure focus).
+The diagram below illustrates the agentic SDLC architecture that this book prepares you to design, build, and govern. It represents the target state: a fully instrumented development lifecycle in which specialised AI agents own each phase, draw context from a shared enterprise infrastructure layer, operate under continuous governance, and are gated by human approval at critical decision points. Each subsequent chapter deep-dives into one or more agents in this architecture.
 
-> 📊 **Figure 1.1 — Agentic SDLC Architecture: The North Star**
+> 📊 **Figure 1.1: The Agentic SDLC Architecture — the book's target state.**
 >
 > ![Agentic SDLC Architecture — The North Star](../../diagrams/agentic-sdlc-v1-north-star.png)
+
+The following table maps each agent in the diagram to its corresponding book chapter:
+
+| Agent in Diagram | Book Chapter(s) | What You Will Learn |
+|-----------------|-----------------|--------------------|
+| Product Discovery Agent | Ch 5: AI-Powered PDLC | How AI compresses Discovery and Viability, spec-driven development with Kiro |
+| Project Background Agent | Ch 6: AI-Assisted Requirements & Planning | AI-generated project documentation, SOPs, and background synthesis |
+| Epic Agent + Story Agent | Ch 6: AI-Assisted Requirements & Planning | AI-generated epics, user stories, acceptance criteria in EARS notation |
+| Architecture Agent | Ch 7: AI-Powered Design & Architecture | AI-recommended architectures, design doc generation, pattern selection |
+| Data Agent | Ch 8: Data Engineering & Platform Architecture | AI-assisted data modelling, intelligent pipelines, document processing, synthetic data |
+| Planning Agent | Ch 7: AI-Powered Design & Architecture | AI-generated implementation plans, task sequencing, dependency mapping |
+| Coding Agent | Ch 9: Coding Agents & AI Pair Programming | Claude Code, Copilot, Cursor — agentic coding at scale |
+| Testing Agent | Ch 11: AI-Driven Testing & QA | AI test generation, security scanning, mutation testing, visual regression |
+| Release Agent | Ch 12–13: CI/CD and Deployment & Ops | Intelligent pipelines, predictive builds, AIOps, self-healing systems |
+| Governance Agent | Ch 18: Governance, Security & Responsible AI | IP/licensing, code provenance, compliance automation, AI safety |
+| Documentation Agent | Ch 17: AI-Driven Documentation & Knowledge Mgmt | Living ADRs, API docs, runbooks, audit trails, onboarding guides |
+| Enterprise Context Layer (MCP) | Ch 16: AI Agent Infrastructure | MCP servers, tool use, enterprise integration, access control |
+| Human Approval Gates (◆) | Ch 14 + Ch 18 | Human-in-the-loop design, graduated autonomy, regulated-industry governance |
+| Feedback Loops (↩ ↻) | Ch 14: AI Agents in Production | Orchestration patterns, fix-test cycles, production-to-discovery iteration |
+
+This architecture is not theoretical. Every component will be implemented for the CommercialEdge Bank onboarding platform across the chapters that follow.
 
 | Part | Chapters | Focus |
 |------|----------|-------|

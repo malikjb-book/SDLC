@@ -13,6 +13,8 @@ In 2025, **75% of organizations** are increasing their observability budgets, wi
 
 But production AI isn't just about monitoring. It encompasses intelligent deployment strategies (how code gets to production safely), cost optimization (how to run production efficiently), capacity planning (how to scale ahead of demand), and chaos engineering (how to build resilience proactively). This chapter covers the full stack.
 
+*(See Chapter 14: Agentic Enterprise Architecture for how this agent class orchestrates with others)*
+
 ## Learning Objectives
 
 By the end of this chapter, you will be able to:

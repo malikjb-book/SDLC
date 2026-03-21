@@ -7,6 +7,8 @@
 
 ## Overview
 
+The Testing Agent is the quality gate of the agentic SDLC (Figure 1.1). It operates in a tight feedback loop with the Coding Agent — test failures trigger automated fix-and-resubmit cycles — and its output feeds the human Go/No-go approval gate that governs progression to production. This chapter covers the AI-driven testing practices that make this agent reliable enough to serve as the enterprise's automated quality assurance layer.
+
 Testing is arguably the SDLC phase most ripe for AI transformation. It is repetitive, pattern-driven, and chronically under-invested — the exact profile where AI delivers outsized returns.
 
 By 2025, **81% of development teams** are using AI in their testing workflows. Organizations adopting AI testing tools report **60–80% reduction in test maintenance costs** (Forrester 2025). Meta deploys mutation-guided LLM-based test generation across its platforms to strengthen defenses against regressions. The AI testing market is projected to reach **$35.96 billion by 2032**.

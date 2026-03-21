@@ -9,6 +9,8 @@
 
 This is the heart of the AI-augmented SDLC.
 
+The Coding Agent occupies the most computationally intensive position in the agentic SDLC architecture (Figure 1.1). It consumes the implementation plan from the Planning Agent, draws context from the Enterprise Context Layer (code standards, approved libraries, existing codebase), and produces the pull requests, source code, and unit tests that the Testing Agent will verify. Understanding this position in the pipeline is essential for configuring the coding agent's context, constraints, and review requirements correctly.
+
 By early 2026, **80–85% of developers** regularly use AI coding assistants, and **90% of Fortune 100 companies** have deployed AI coding tools across their engineering organizations. GitHub Copilot generates an average of **46% of user-written code** across its 20+ million users. Cursor, an AI-first IDE launched in 2023, exceeded **$2 billion in annualized revenue** by March 2026.
 
 These are not incremental productivity gains — they represent a fundamental shift in how software is written, reviewed, and maintained. This chapter provides an enterprise-grade understanding of the coding agent landscape: the tools, the protocols, the workflows, and the evidence-based practices that separate successful AI-augmented teams from those drowning in AI-generated technical debt.
