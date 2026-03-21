@@ -229,7 +229,7 @@ Let us walk through each phase to see *how* these differences arise.
 
 Let's see how the two paths diverge in the discovery stage.
 
-> 📊 **Figure 1.8: Discovery Phase Comparison** — Traditional vs. AI-Enabled discovery workflows *(image pending generation)*
+![Figure 1.8: Discovery Phase Comparison — Traditional vs. AI-Enabled discovery workflows.](figures/fig-1-8-discovery.png)
 
 **The Traditional Way.** The product manager schedules eight workshops over six weeks with compliance officers, relationship managers, operations leads, and IT. A business analyst manually synthesises findings into a 40-page opportunity assessment. Two review cycles follow. Three months in, a competitor launches same-day onboarding — the viability assumptions must be revisited, adding two more weeks.
 
@@ -265,7 +265,7 @@ Let's see how the two paths diverge in the discovery stage.
 
 Now let's look at where most people assume AI adds value — the coding phase itself.
 
-> 📊 **Figure 1.9: Coding Phase Comparison** — Traditional vs. AI-Enabled coding workflows *(image pending generation)*
+![Figure 1.9: Coding Phase Comparison — Traditional vs. AI-Enabled coding workflows.](figures/fig-1-9-coding.png)
 
 **The Traditional Way.** Eight developers work for 16 weeks. Pull request reviews average two-day turnaround. Context is lost when developers switch features.
 
@@ -347,7 +347,7 @@ Every one of these risks is addressed in the relevant chapter: code quality in C
 
 This book mirrors the Software Development Lifecycle itself — progressing from foundational concepts through every SDLC phase, then addressing cross-cutting concerns, and concluding with legacy modernisation and real-world case studies. It comprises **22 chapters organised in six parts**:
 
-> 📊 **Figure 1.10: Book Structure** — six parts from foundations through every SDLC phase to modernisation and case studies *(image pending generation)*
+![Figure 1.10: Book Structure — six parts from foundations through every SDLC phase to modernisation and case studies.](figures/fig-1-10-book-structure.png)
 
 - **Part I — Foundations (Chapters 0–4):** Context, history, and the AI tool landscape
 - **Part II — Product Lifecycle (Chapter 5):** PDLC — Discovery → Viability → Spec
