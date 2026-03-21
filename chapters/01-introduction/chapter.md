@@ -26,7 +26,7 @@ But first, let us understand why this shift is happening now.
 
 To appreciate why AI integration into the SDLC matters, we need to understand the structural pressures bearing down on modern software organisations. Think of them as four tectonic plates, all shifting at once.
 
-> 📊 **Figure 1.1: The Four Forces — escalating complexity, velocity demands, talent shortage, and technical debt — converging on modern software teams.**
+![Figure 1.1: The Four Forces — escalating complexity, velocity demands, talent shortage, and technical debt — converging on modern software teams.](figures/fig-1-1-four-forces.png)
 
 ### Force 1: Escalating Complexity
 
@@ -50,7 +50,7 @@ Technical debt has reached a scale that now threatens organisational agility at 
 
 What does that look like in practice? According to Pegasystems research, the average global enterprise wastes more than **$370 million annually** due to its inability to efficiently modernise legacy systems.
 
-> 📊 **Figure 1.2: The Scale of Technical Debt — a visual showing 61 billion workdays of global repair time, $370M+ wasted per enterprise, and 45% of code classified as fragile.**
+![Figure 1.2: The Scale of Technical Debt — 61 billion workdays of global repair time, $370M+ wasted per enterprise, and 45% of code classified as fragile.](figures/fig-1-2-technical-debt.png)
 
 ### Why These Forces Matter Together
 
@@ -76,7 +76,7 @@ So the pressure is real. But what about the AI tools themselves? Are they ready?
 
 The evolution of AI coding tools can be understood as a progression through three distinct generations, as illustrated in Figure 1.3.
 
-> 📊 **Figure 1.3: Three Generations of AI Coding Tools — from inline autocomplete (2021) to chat-based assistance (2023) to autonomous agents that plan, execute, and iterate (2025).**
+![Figure 1.3: Three Generations of AI Coding Tools — from inline autocomplete (2021) to chat-based assistance (2023) to autonomous agents that plan, execute, and iterate (2025).](figures/fig-1-3-three-generations.png)
 
 The first generation, exemplified by early GitHub Copilot (2021–2023), provided inline code completions. Useful for reducing keystrokes, but no awareness of your project beyond the current file.
 
@@ -97,7 +97,7 @@ The adoption numbers tell a clear story. By early 2026:
 
 Claude Code, despite launching only eight months prior, became the most widely used AI coding tool by early 2026 — rising from 4 percent of developers in May 2025 to 63 percent by February 2026.
 
-> 📊 **Figure 1.4: AI Tool Adoption Timeline — showing the rapid convergence of developers onto AI coding tools, with adoption rising from early experiments to near-universal use between 2021 and 2026.**
+![Figure 1.4: AI Adoption in Software Engineering (2026) — 92% of developers using AI tools, 51% daily, 41% of production code AI-generated.](figures/fig-1-4-ai-adoption.png)
 
 ### The Nuance: Why Faster Coding ≠ Faster Delivery
 
@@ -119,7 +119,7 @@ Why? Because coding speed is only one bottleneck. Requirements that are vague. A
 
 If faster coding alone does not solve the problem, why bother? Because the gains from AI compound when you apply it across the *entire* lifecycle. Let us look at the four pillars of the business case.
 
-> 📊 **Figure 1.5: The Four Pillars of the AI-SDLC Business Case — accelerated delivery, enhanced quality, cost optimisation, and developer experience — showing how gains compound across phases.**
+![Figure 1.5: The Four Pillars of the AI-SDLC Business Case — accelerated delivery, enhanced quality, cost optimisation, and developer experience.](figures/fig-1-5-four-pillars.png)
 
 ### Pillar 1: Accelerated Delivery
 
@@ -157,7 +157,7 @@ Why this use case? Three reasons:
 
 The platform covers the full onboarding journey across eight stages:
 
-> 📊 **Figure 1.6: The CommercialEdge Bank Onboarding Pipeline — eight stages from prospect capture (Day 0) to handover and activation (Day 5).**
+![Figure 1.6: The CommercialEdge Bank Onboarding Pipeline — eight stages from prospect capture (Day 0) to handover and activation (Day 5).](figures/fig-1-6-onboarding-pipeline.png)
 
 | Stage | Onboarding Step | Target Day |
 |-------|----------------|------------|
@@ -195,7 +195,7 @@ This is the heart of the chapter. We are going to walk through the CommercialEdg
 
 Before we dive into the phase-by-phase comparison, here is the summary. Take a moment to absorb these numbers:
 
-> 📊 **Figure 1.7: Traditional vs. AI-Enabled SDLC — side-by-side comparison showing the difference in timeline (9–12 months vs. 3–4 months), team size (25–35 vs. 12–18), and cost ($4–6M vs. $1.5–2.5M).**
+![Figure 1.7: Traditional vs. AI-Enabled SDLC — side-by-side comparison showing the difference in timeline, team size, and cost.](figures/fig-1-7-traditional-vs-ai.png)
 
 | Dimension | Traditional SDLC | AI-Enabled SDLC |
 |-----------|------------------|-----------------|
@@ -215,7 +215,7 @@ Let us walk through each phase to see *how* these differences arise.
 
 ### Phase 1: Discovery and Viability
 
-> 📊 **Figure 1.8: Discovery Phase Comparison — Traditional (6–8 weeks of workshops producing a 40-page document) vs. AI-Enabled (2 weeks with AI-synthesised research and rapid prototyping).**
+*Figure 1.8: Discovery Phase Comparison — to be generated (purple-white enterprise style).*
 
 **The Traditional Way.** The product manager schedules eight workshops over six weeks with compliance officers, relationship managers, operations leads, and IT. A business analyst manually synthesises findings into a 40-page opportunity assessment. Two review cycles follow. Three months in, a competitor launches same-day onboarding — the viability assumptions must be revisited, adding two more weeks.
 
@@ -249,7 +249,7 @@ Let us walk through each phase to see *how* these differences arise.
 
 ### Phase 5: Build (Coding)
 
-> 📊 **Figure 1.9: Coding Phase Comparison — Traditional (8 developers, 16 weeks, 2-day PR turnaround) vs. AI-Enabled (5 developers, 6 weeks, PR turnaround in hours).**
+*Figure 1.9: Coding Phase Comparison — to be generated (purple-white enterprise style).*
 
 **The Traditional Way.** Eight developers work for 16 weeks. Pull request reviews average two-day turnaround. Context is lost when developers switch features.
 
@@ -331,7 +331,7 @@ Every one of these risks is addressed in the relevant chapter: code quality in C
 
 This book mirrors the Software Development Lifecycle itself — progressing from foundational concepts through every SDLC phase, then addressing cross-cutting concerns, and concluding with legacy modernisation and real-world case studies. It comprises **22 chapters organised in six parts**:
 
-> 📊 **Figure 1.10: Book Structure — six parts flowing from Foundations through PDLC, SDLC Phases, Production AI, Cross-Cutting Concerns, and Modernisation & Capstone.**
+*Figure 1.10: Book Structure — to be generated (purple-white enterprise style).*
 
 - **Part I — Foundations (Chapters 0–4):** Context, history, and the AI tool landscape
 - **Part II — Product Lifecycle (Chapter 5):** PDLC — Discovery → Viability → Spec
