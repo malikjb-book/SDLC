@@ -137,7 +137,7 @@ If faster coding alone does not solve the problem, why bother? Because the gains
 
 ### Pillar 1: Accelerated Delivery
 
-The speed gains documented in Section 1.2 translate into real delivery improvements when applied broadly. Teams with high AI adoption touch 9 percent more tasks and handle **47 percent more pull requests per day**. Large enterprises have reported 28 percent increases in code shipment volume to production.
+The speed gains we documented earlier translate into real delivery improvements when applied broadly. Teams with high AI adoption touch 9 percent more tasks and handle **47 percent more pull requests per day**. Large enterprises have reported 28 percent increases in code shipment volume to production.
 
 ### Pillar 2: Enhanced Quality
 
@@ -209,6 +209,8 @@ This is the heart of the chapter. We walk the CommercialEdge Bank onboarding pla
 > - **Team size:** 25–35 people → 12–18 people
 > - **Estimated cost:** $4–6M → $1.5–2.5M (60% reduction)
 
+![Figure 1.7: Traditional vs. AI-Enabled SDLC — side-by-side comparison showing the difference in timeline, team size, and cost.](figures/fig-1-7-traditional-vs-ai.png)
+
 Let us walk through each phase to see *how* these differences arise.
 
 ### Phase 1: Discovery and Viability
@@ -241,6 +243,8 @@ Let's see how the two paths diverge in the discovery stage.
 
 ### Phase 4: Data Engineering
 
+Data is the fuel of any software system. How does each approach handle it?
+
 **The Traditional Way.** Three weeks for schema design. Six weeks hand-coding ETL pipelines. Test data created by masking production records — carrying compliance risk.
 
 **The AI-Enabled Way.** The Data Agent generates the entity-relationship model from requirements, verified against the existing core banking schema. Self-healing pipelines auto-adapt when provider formats change. Synthetic data generation produces 500 realistic corporate client profiles in hours with **zero compliance exposure**.
@@ -257,7 +261,7 @@ Now let's look at where most people assume AI adds value — the coding phase it
 
 ### Remaining Phases at a Glance
 
-The pattern continues through testing, deployment, production AI, and governance. The following table captures the full contrast:
+By now the pattern is clear: each phase follows the same arc — manual effort in the traditional path, agent-driven acceleration in the AI-enabled one. Rather than walking through every remaining phase in detail, the following table captures the full contrast:
 
 | SDLC Phase | Traditional | AI-Enabled | Chapters |
 |------------|-------------|------------|----------|
@@ -344,6 +348,8 @@ The following table maps each agent in the diagram to its corresponding book cha
 
 This architecture is not theoretical. Every component will be implemented for the CommercialEdge Bank onboarding platform across the chapters that follow.
 
+But you do not need to wait until you have read all 22 chapters to start.
+
 ---
 
 ## What to Do on Monday Morning
@@ -371,6 +377,8 @@ Let us recap the big ideas from this chapter:
 - **The business case is compelling but conditional.** AI-enabled gains compound when pursued across every phase. In isolation, benefits may be marginal or offset by new risks such as AI-induced technical debt and over-trust.
 
 - **Each of the 22 chapters maps to a specific phase.** The book follows the CommercialEdge Bank use case from discovery through deployment and beyond, with every chapter building on the artifacts produced in the previous one.
+
+These six takeaways answer the five questions we set out at the start of this chapter. Now let us begin.
 
 ---
 
