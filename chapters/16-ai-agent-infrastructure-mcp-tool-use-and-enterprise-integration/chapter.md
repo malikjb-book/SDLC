@@ -6,7 +6,7 @@ To understand why the enterprise context layer matters, consider the agentic SDL
 
 > 📊 **Figure 16.1: The Enterprise Context Layer — how MCP serves every agent in the SDLC.**
 >
-> ![Agentic SDLC Architecture — Infrastructure Focus](../../diagrams/agentic-sdlc-v2-infrastructure.png)
+> ![Agentic Product Development Lifecycle — Infrastructure Focus](../../diagrams/agentic-sdlc-v2-infrastructure.png)
 
 The diagram reveals a critical architectural property: the MCP layer is not a convenience — it is the connective tissue that makes the multi-agent architecture functional. The following table maps each MCP server to the agents that consume it and the enterprise system it exposes:
 

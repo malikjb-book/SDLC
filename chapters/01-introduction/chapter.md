@@ -199,7 +199,7 @@ The platform covers the full onboarding journey across eight stages. **What are 
 
 ---
 
-## 1.5 Two Paths, One Platform — Which path will you take?
+## 1.5 Two Paths, One Product — Which path will you take?
 
 This is the heart of the chapter. We walk the CommercialEdge Bank onboarding platform through both lenses: a traditional SDLC and an AI-enabled agentic SDLC. Same requirements. Same regulations. Different approach — and radically different outcomes.
 
@@ -300,30 +300,30 @@ Every one of these risks is addressed in the relevant chapter: code quality in C
 
 ## 1.6 Your Roadmap: How This Book Is Organised
 
-This book mirrors the Software Development Lifecycle itself — progressing from foundational concepts through every SDLC phase, then addressing cross-cutting concerns, and concluding with legacy modernisation and real-world case studies. It comprises **22 chapters organised in six parts**:
+This book mirrors the Product Development Lifecycle itself — progressing from discovery and specification through engineering execution, operations, and cross-cutting concerns, and concluding with legacy modernisation and real-world case studies. It comprises **22 chapters organised in six parts**:
 
 ![Figure 1.10: Book Structure — six parts from foundations through every SDLC phase to modernisation and case studies.](figures/fig-1-10-book-structure.png)
 
-- **Part I — Foundations (Chapters 0–4):** Context, history, and the AI tool landscape
-- **Part II — Product Lifecycle (Chapter 5):** PDLC — Discovery → Viability → Spec
-- **Part III — SDLC Phases (Chapters 6–13):** Requirements → Design → Data → Code → Review → Test → CI/CD → Ops
-- **Part IV — Production AI (Chapter 14):** AI agents as product components
-- **Part V — Cross-Cutting (Chapters 15–20):** DX, Infrastructure, Docs, Governance, Economics, ROI
-- **Part VI — Modernisation & Capstone (Chapters 21–22):** Legacy + Case Studies
+- **Part I — Foundations of the AI-Powered PDLC (Chapters 0–4):** What the product lifecycle is, how it has evolved, and the AI landscape that transforms it
+- **Part II — Discover & Specify (Chapters 5–6):** From market insight through executable specification — the upstream phases that determine what gets built
+- **Part III — Build & Deliver (Chapters 7–12):** The engineering lifecycle: requirements through deployment, powered by AI agents at every phase
+- **Part IV — Operate & Evolve (Chapters 13–14):** AI agents as product components, operational intelligence, and the feedback loop to discovery
+- **Part V — Platform, Governance & Economics (Chapters 15–20):** The cross-cutting infrastructure, documentation, security, cost management, and maturity measurement
+- **Part VI — Modernise & Scale (Chapters 21–22):** Legacy transformation and real-world adoption playbook
 
 > 💡 **How to Read This Book**
 >
-> If you are new to AI in the SDLC, read linearly — each chapter builds on the previous one. If you already use AI for coding and want to expand, jump to your weakest SDLC phase using the agent-to-chapter mapping below. If you are a CTO building a business case, start with Chapters 1, 19, and 20.
+> If you are new to AI in the PDLC, read linearly — each chapter builds on the previous one. If you already use AI for coding and want to expand, jump to your weakest PDLC phase using the agent-to-chapter mapping below. If you are a CTO building a business case, start with Chapters 1, 19, and 20.
 
-### The Agentic SDLC Architecture
+### The Agentic Product Development Lifecycle
 
-The diagram below illustrates the agentic SDLC architecture that this book prepares you to design, build, and govern. **Why this matters:** it is a fully instrumented development lifecycle where specialised AI agents own each phase, draw context from a shared enterprise infrastructure layer, operate under continuous governance, and are gated by human approval at critical decision points.
+The diagram below illustrates the agentic product development lifecycle that this book prepares you to design, build, and govern. **Why this matters:** it is a fully instrumented development lifecycle where specialised AI agents own each phase, draw context from a shared enterprise infrastructure layer, operate under continuous governance, and are gated by human approval at critical decision points.
 
-Think of the SDLC as a factory assembly line — AI agents are the robots on that line, each one specialised for a specific station. Each subsequent chapter deep-dives into one or more agents in this architecture.
+Think of the PDLC as a factory assembly line — AI agents are the robots on that line, each one specialised for a specific station. Each subsequent chapter deep-dives into one or more agents in this architecture.
 
-> 📊 **Figure 1.11: The Agentic SDLC Architecture — the book's target state.**
+> 📊 **Figure 1.11: The Agentic Product Development Lifecycle — the book's target state.**
 >
-> ![Agentic SDLC Architecture — The North Star](../../diagrams/agentic-sdlc-v1-north-star.png)
+> ![Agentic Product Development Lifecycle — The North Star](../../diagrams/agentic-sdlc-v1-north-star.png)
 
 ### Agent-to-Chapter Mapping
 

@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to **AI-Augmented SDLC**!
+Thank you for your interest in contributing to **AI-Powered PDLC**!
 
 ## How to Contribute
 

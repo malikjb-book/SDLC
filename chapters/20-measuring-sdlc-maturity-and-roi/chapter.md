@@ -1,4 +1,4 @@
-# Chapter 20: Measuring SDLC Maturity & ROI
+# Chapter 20: Measuring PDLC Maturity & ROI
 
 > *"What gets measured gets managed — but what gets mismeasured gets broken. Applying the wrong metrics to AI-augmented software development is worse than measuring nothing at all, because it creates perverse incentives that actively undermine the benefits AI is supposed to deliver."*
 > — Adapted from Peter Drucker and Nicole Forsgren (DORA)
@@ -134,7 +134,7 @@ metrics:
 
 ## 14.2 AI Adoption Maturity Model
 
-### The Five Levels of AI-Augmented SDLC Maturity
+### The Five Levels of AI-Augmented PDLC Maturity
 
 | Level | Name | Description | % of Orgs (2025 est.) |
 |-------|------|------------|----------------------|

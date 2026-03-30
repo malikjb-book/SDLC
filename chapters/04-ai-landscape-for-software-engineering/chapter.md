@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 1. Explain how large language models work at a conceptual level — tokens, context windows, attention, inference, and hallucination — sufficient to understand their capabilities and limitations for software engineering.
 2. Distinguish between the four generations of AI developer tools (autocomplete, chat, copilot, autonomous agent) and identify where each is appropriate.
-3. Map the current AI tool landscape to SDLC phases, understanding which tool categories serve which phases and where gaps remain.
+3. Map the current AI tool landscape to PDLC phases, understanding which tool categories serve which phases and where gaps remain.
 4. Understand agentic AI architectures — tool use, planning, memory, and orchestration — that enable AI to move from suggestion to autonomous action.
 5. Apply a structured evaluation framework for selecting AI tools in an enterprise context, balancing capability, cost, security, and vendor risk.
 
@@ -68,7 +68,7 @@ Hallucination — the production of plausible-sounding but factually incorrect o
 
 For CommercialEdge Bank, hallucination is not merely an inconvenience — it is a regulatory risk. A hallucinated compliance screening rule that incorrectly clears a sanctioned entity would expose the bank to criminal liability. This is why every chapter of this book that applies AI to the banking use case includes explicit verification mechanisms: spec-driven traceability (Chapter 5), human approval gates (Chapter 14), automated testing (Chapter 11), and continuous governance (Chapter 18).
 
-The primary mitigations for hallucination are grounding (providing the model with authoritative source material via RAG or context injection), structured output (constraining the model’s response format), verification (automated testing of AI-generated artifacts), and human review at high-stakes decision points. These mitigations are woven throughout the agentic SDLC architecture.
+The primary mitigations for hallucination are grounding (providing the model with authoritative source material via RAG or context injection), structured output (constraining the model's response format), verification (automated testing of AI-generated artifacts), and human review at high-stakes decision points. These mitigations are woven throughout the agentic product development lifecycle.
 
 > **The Hallucination Principle**
 >
@@ -103,7 +103,7 @@ The third generation embedded AI deeply into the IDE with project-wide awareness
 
 The fourth and current generation represents a qualitative shift. Terminal-native agents like Claude Code, cloud-based agents like OpenAI Codex, and agentic IDE modes like Copilot Agent Mode and Google Antigravity can read entire repositories (up to one million tokens of context), plan multi-step implementation strategies, execute code in sandboxed environments, run tests, diagnose failures, and iterate on their own output with minimal human supervision. These agents do not just suggest — they plan, act, observe, and refine.
 
-The industry is converging on Generation 4 as the dominant paradigm. Every major tool — regardless of its interface (terminal, IDE, cloud) — is racing toward agentic capability. The differentiator is no longer whether the AI can write code. It is whether the AI can plan a coherent implementation across an entire codebase, execute it, verify it through tests, and deliver a reviewable pull request. This is the capability that the agentic SDLC architecture from Chapter 1 is built upon.
+The industry is converging on Generation 4 as the dominant paradigm. Every major tool — regardless of its interface (terminal, IDE, cloud) — is racing toward agentic capability. The differentiator is no longer whether the AI can write code. It is whether the AI can plan a coherent implementation across an entire codebase, execute it, verify it through tests, and deliver a reviewable pull request. This is the capability that the agentic product development lifecycle from Chapter 1 is built upon.
 
 ### The Convergence Thesis
 
@@ -113,9 +113,9 @@ By early 2026, all major AI coding tools — Claude Code, Codex, Copilot, Cursor
 
 ## 4.3 The Current Tool Landscape
 
-With the generational taxonomy established, this section maps the current AI tool landscape to the SDLC phases it serves. This is not a product review — Chapter 9 provides detailed comparisons for coding agents, and each applied chapter evaluates tools relevant to its phase. Instead, this is a landscape map: which categories of tools exist, what they do, and how they fit together.
+With the generational taxonomy established, this section maps the current AI tool landscape to the PDLC phases it serves. This is not a product review — Chapter 9 provides detailed comparisons for coding agents, and each applied chapter evaluates tools relevant to its phase. Instead, this is a landscape map: which categories of tools exist, what they do, and how they fit together.
 
-| Tool Category | SDLC Phases Served | Key Characteristics | Representative Tools |
+| Tool Category | PDLC Phases Served | Key Characteristics | Representative Tools |
 |---------------|--------------------|---------------------|----------------------|
 | **Terminal-native agents** | Build, Review, Test, Deploy | CLI-first, full repo context (1M tokens), autonomous multi-file execution, git-native | Claude Code, Codex CLI, OpenCode |
 | **IDE-native agents** | Design, Build, Review | Editor-integrated, visual diff, inline suggestions + agent mode, familiar UX | Cursor, Windsurf, Antigravity (Google) |
@@ -130,7 +130,7 @@ With the generational taxonomy established, this section maps the current AI too
 
 A critical finding from The Pragmatic Engineer’s 2026 survey is that 70 percent of developers use between two and four AI tools simultaneously, and 15 percent use five or more. This is not indecision — it is a rational response to tools that operate at different layers of the development workflow. A typical senior developer in 2026 might use Claude Code for complex, multi-file implementation tasks that require full codebase reasoning; Cursor for day-to-day coding flow with fast inline suggestions; Copilot for GitHub-integrated PR review and workflow automation; and specialised tools for testing, documentation, or security scanning.
 
-For CommercialEdge Bank, this multi-tool approach is the expected operating model. Different SDLC phases demand different tool capabilities, and no single tool excels across all of them. The chapter-by-chapter structure of this book reflects this reality: each chapter identifies the tool category most appropriate for its SDLC phase.
+For CommercialEdge Bank, this multi-tool approach is the expected operating model. Different PDLC phases demand different tool capabilities, and no single tool excels across all of them. The chapter-by-chapter structure of this book reflects this reality: each chapter identifies the tool category most appropriate for its PDLC phase.
 
 ---
 
@@ -188,7 +188,7 @@ The MCP architecture follows a client-server model. The AI agent (the client) co
 
 By early 2026, MCP has achieved broad industry adoption. Claude Code supports over 300 MCP integrations. Cursor, Kiro, Copilot, and VS Code all support MCP natively. The significance is not just technical convenience — it is architectural. MCP transforms the AI tool landscape from a collection of siloed assistants into an integrated ecosystem where agents can access the same enterprise context, regardless of which specific agent a developer uses.
 
-For CommercialEdge Bank, MCP is the infrastructure that makes the agentic SDLC architecture viable. The MCP servers for core banking API, compliance databases, document store, regulatory documentation, code standards, and architecture guidelines are the connective tissue that feeds every agent in the pipeline. Chapter 16 provides the detailed implementation guide.
+For CommercialEdge Bank, MCP is the infrastructure that makes the agentic product development lifecycle viable. The MCP servers for core banking API, compliance databases, document store, regulatory documentation, code standards, and architecture guidelines are the connective tissue that feeds every agent in the pipeline. Chapter 16 provides the detailed implementation guide.
 
 > **MCP: The HTTP of AI Agents**
 >
@@ -202,7 +202,7 @@ The conceptual foundations are established. This section provides the practical 
 
 | Dimension | What to Assess | CommercialEdge Bank Requirement |
 |-----------|----------------|---------------------------------|
-| **Capability** | Which SDLC phases does the tool serve? Code generation, review, testing, documentation, deployment? | Full lifecycle coverage: requirements through deployment. Compliance screening logic demands high reasoning quality. |
+| **Capability** | Which PDLC phases does the tool serve? Code generation, review, testing, documentation, deployment? | Full lifecycle coverage: requirements through deployment. Compliance screening logic demands high reasoning quality. |
 | **Context** | How much of the codebase can it understand? Context window size, repo-level awareness, multi-file reasoning. | Must reason across 8 microservices, legacy core banking integration, and compliance rules simultaneously. 200K+ tokens minimum. |
 | **Autonomy** | Suggestion only, human-directed editing, or fully autonomous plan-execute-iterate? | Autonomous coding for standard tasks. Human-in-the-loop mandatory for compliance-affecting changes. |
 | **Integration** | IDE support, MCP compatibility, CI/CD hooks, API access? | Must integrate with existing CI/CD (GitHub Actions), connect to core banking and compliance systems via MCP. |
@@ -250,15 +250,15 @@ This tiered security model — cloud for general development, private deployment
 
 ### Looking Ahead
 
-With the technology landscape mapped, the conceptual foundations established, and the CommercialEdge Bank tool stack defined, the book transitions from foundations to application. Chapter 5 begins the applied journey: using AI to compress the Product Development Lifecycle — from market insight through specification generation — producing the artifacts that feed every subsequent SDLC chapter. The next 18 chapters will systematically demonstrate how each AI capability identified in this chapter transforms a specific SDLC phase, building the agentic SDLC architecture one component at a time.
+With the technology landscape mapped, the conceptual foundations established, and the CommercialEdge Bank tool stack defined, the book transitions from foundations to application. Chapter 5 begins the applied journey: using AI to compress the Product Development Lifecycle — from market insight through specification generation — producing the artifacts that feed every subsequent chapter. The next 18 chapters will systematically demonstrate how each AI capability identified in this chapter transforms a specific PDLC phase, building the agentic product development lifecycle one component at a time.
 
 ---
 
 ## Key Takeaways
 
-- **LLMs are probabilistic, not deterministic.** Understanding tokens, context windows, and hallucination shapes every design decision in AI-augmented SDLC. For regulated industries, hallucination is not an inconvenience — it is a compliance risk that requires structural mitigations.
+- **LLMs are probabilistic, not deterministic.** Understanding tokens, context windows, and hallucination shapes every design decision in AI-augmented PDLC. For regulated industries, hallucination is not an inconvenience — it is a compliance risk that requires structural mitigations.
 - **The tool landscape has evolved through four generations, converging on autonomous agents.** By 2026, every major tool is racing toward Generation 4: plan, execute, test, iterate. The agent loop is the universal architecture.
-- **Different tool categories serve different SDLC phases.** The winning strategy is multi-tool (70% of developers use 2–4 tools), not single-vendor. Each chapter identifies the tool category most appropriate for its phase.
+- **Different tool categories serve different PDLC phases.** The winning strategy is multi-tool (70% of developers use 2–4 tools), not single-vendor. Each chapter identifies the tool category most appropriate for its phase.
 - **Agentic AI shares a common architecture regardless of vendor.** The plan → act → observe → reflect loop, combined with tool use and structured context, is the universal pattern. Understanding the pattern matters more than knowing any specific tool.
 - **MCP is the emerging integration standard.** It solves the N×M problem of connecting agents to enterprise systems. Early adoption reduces future integration debt and enables the multi-tool strategy.
 - **Enterprise evaluation requires seven dimensions.** Capability, context, autonomy, integration, security, cost, and vendor risk. For regulated industries, security is typically the gating factor, not capability.

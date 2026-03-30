@@ -486,7 +486,7 @@ Version: 2.0 | Effective: 2026-01-15 | Owner: CTO Office
 
 ## 1. Scope
 This policy covers all use of AI tools (coding assistants, agents, 
-and automated systems) within the software development lifecycle.
+and automated systems) within the product development lifecycle.
 
 ## 2. Approved Tools
 | Tool | Tier | Approved Use |

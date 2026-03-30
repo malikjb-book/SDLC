@@ -4,9 +4,9 @@
 
 To make these patterns concrete, let us revisit the agentic SDLC architecture introduced in Chapter 1, this time annotated to highlight the orchestration patterns at work. This is not an abstract reference — it is the architecture of a real multi-agent system, and it employs three of the four patterns discussed above simultaneously.
 
-> 📊 **Figure 14.1: Orchestration patterns in the Agentic SDLC Architecture.**
+> 📊 **Figure 14.1: Orchestration patterns in the Agentic Product Development Lifecycle.**
 >
-> ![Agentic SDLC Architecture — Orchestration Patterns](../../diagrams/agentic-sdlc-v3-orchestration.png)
+> ![Agentic Product Development Lifecycle — Orchestration Patterns](../../diagrams/agentic-sdlc-v3-orchestration.png)
 
 Three patterns are visible in the architecture. The primary flow — from Product Discovery Agent through to Release Agent — follows the sequential pipeline pattern: each agent produces artifacts that become inputs for the next, with clear handoff boundaries. The Governance Agent operates as a parallel supervisor: it monitors every phase concurrently, consuming artifacts as they are produced and validating them against compliance requirements without blocking the main pipeline. The Coding Agent and Testing Agent form a fix-test loop — a localised iterative cycle within the broader sequential flow, where test failures trigger the coding agent to diagnose, fix, and resubmit until tests pass.
 

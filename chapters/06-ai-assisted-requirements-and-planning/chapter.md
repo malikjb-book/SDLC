@@ -1095,13 +1095,13 @@ While this chapter demonstrates the power of AI across the requirements pipeline
 | **Over-reliance on AI prioritization** | Teams defer to AI-generated WSJF scores without applying business judgment | AI scores are *inputs* to human decisions; final prioritization must involve the Product Owner and stakeholders |
 | **False confidence in completeness** | AI produces well-formatted, comprehensive-looking specs that mask gaps | Always run the Specification Analysis prompt (§5.3) as a second pass on AI-generated requirements |
 
-> 📚 **Further Reading:** For a comprehensive treatment of AI governance, security, and responsible use across all SDLC phases, see **Chapter 13: Governance, Security & Responsible AI in SDLC**.
+> 📚 **Further Reading:** For a comprehensive treatment of AI governance, security, and responsible use across all PDLC phases, see **Chapter 18: Governance, Security & Responsible AI**.
 
 ---
 
 ## Key Takeaways
 
-1. **Requirements are where AI has the highest leverage in the SDLC** — a defect caught in requirements costs 100x less than one caught in production. AI that improves requirements quality has outsized ROI.
+1. **Requirements are where AI has the highest leverage in the PDLC** — a defect caught in requirements costs 100x less than one caught in production. AI that improves requirements quality has outsized ROI.
 
 2. **58% of practitioners already use AI in requirements engineering** — with 69% reporting positive impact. The adoption curve is steep and accelerating (arXiv survey, 2025).
 
